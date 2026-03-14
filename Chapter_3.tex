@@ -1,0 +1,242 @@
+\section{NGC 205 IMBH Binary evolution}
+
+\subsection{NGC 205 Hybrid Model Evolution}
+NGC 205 is a nearby dwarf galaxy with a NSC residing at its innermost region; it is belived to host an IMBH binary, whose estimated mass is $\sim 10^4 M_\odot$.\\The 2-D surface brightness profile of the dwarf, both the bulge and NSC treated as indipendent stellar components, is translated into 3-D Sersic density profile using Prugniel \& Simien \cite{Prugniel}:
+
+\begin{equation}
+    \rho(r)=\rho_0\left(\frac{r}{R_e}\right)^{-p}e^{-b\left(\frac{r}{R_e}\right)^{1/n}}.
+\end{equation}
+Here, $\rho_0$ is the density normalization unambiguously set by total galaxy mass, effective radius and Sersic index $n$; from \cite{Terzic}:
+\begin{equation}
+\rho_0
+=
+\frac{M_*}{4\pi R_e^3}
+\frac{b^{\,n(3-p)}}{n\,\Gamma\!\left[n(3-p)\right]}.
+\end{equation}
+The parameters $p$ and $b$ can be expressed as a function of $n$ as follows: $p=1.0-0.6097/n+0.05563/n^2$, and $b \approx 2 n - 1/3 + 0.009876/n$, for $0.5 < n < 10$.\\Observations constrain the quantites $(M,R_{eff},n)$ for both bulge and NSC as reported in Figure (\ref{Khan_2021_NGC205}) of \cite{Khan_2021}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Khan_2021_table.png}
+    \caption{Column 1: Galaxy component. Column 2: Sersic index. Column 3:
+Effective radius of the galaxy component (note: for the IMBH, we quote the
+influence radius instead). Column 4: Stellar mass. Column 5: 2D axial ratio
+as measured by GALFIT.}
+    \label{Khan_2021_NGC205}
+\end{figure}
+
+Numerically it is found
+\begin{itemize}
+    \item Bulge: $\rho_0=4.80\cdot 10^5M_\odot/pc^3$
+    \item NSC: $\rho_0=2.95M_\odot/pc^3$
+\end{itemize}
+and NGC 205 density profile is reconstructed in  Figure (\ref{NGC205 density profile}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_density_profile.png}
+    \caption{NGC 205 bulge, NSC and total mass density profile of stellar distribution.}
+    \label{NGC205 density profile}
+\end{figure}
+Adopting the same prescription of \cite{Khan_2021} and \cite{Holley-Bockelmann_2025}, a symmetric IMBH binary of masses $M_1=M_2=4\cdot10^4M_\odot$ is introduced into NGC 205 core and its evolution, due to stellar and GWs hardening, is tracked combining 3-body scattering experiment hybrid model \cite{Quinlan_1996},\cite{Sesana_2006} and \cite{Peters_1963} equations.\\It is quite relevant to point out that in this astrophysical system the hardening due to bound stars \cite{Sesana_2008} is negligible in light of the symmetry of the binary and the arguments exposed at the end of Sec.(\ref{sec:Loss Cone}).\\Therefore, combining the set of equations related to Unbound evolution
+\begin{equation}\label{da/dt UNBOUND}
+    \frac{da}{dt}|_u = -\frac{a^2 G \rho_{\mathrm{inf}}}{\sigma}  H
+\end{equation}
+
+\begin{equation}\label{de/dt UNBOUND}
+    \frac{de}{dt}|_u = \frac{a G \rho_{\mathrm{inf}}}{\sigma}  H K
+\end{equation}
+and the equations describing GWs driven hardening \ref{da/dt Peterson} \ref{de/dt Peterson}, the set of differential equations must be solved reads
+
+\begin{equation}\label{da/dt Un+GW}
+    \frac{da}{dt} = \frac{da}{dt}|_u+\frac{da}{dt}|_{gw}
+\end{equation}
+
+\begin{equation}\label{de/dt Un+GW}
+    \frac{de}{dt} = \frac{de}{dt}|_u+\frac{de}{dt}|_{gw}
+\end{equation}
+Although the original formulation of the hybrid model relies on a SIS profile, with very peculiar features (i.e. costant velocity dispersion), Sesana \cite{Sesana_2015} showed how to use it for a more general stellar background. The vast majority of stars, unbound to the binary, refilling the loss cone (i.e. having pericenter $\sim a$) come from a region that is just beyond the binary influence radius, hence $r_{inf}$ is the relevant physical scale of the model and $\sigma$ appearing in Equations \ref{da/dt UNBOUND} and \ref{de/dt UNBOUND}, which is in general a function of the radius for spherically symmetric systems, must be computed at the influence radius (here defined as the radius enclosing stellar mass that is twice the binary one).\\Apart from setting the inital point in the $(a,e)$ space, we need to determine several quantities; we start with binary influence radius and $\sigma_{inf}=\sigma(r_{inf})$; they both require the knowledge of the cumulative mass $M(<r)$ associated to the Sersic profile. It results from the integration of $\rho(r)$ and admits analytic solution \cite{Terzic}
+\begin{equation}
+M(<R)
+=
+M_{\rm tot}\,
+\frac{
+\gamma\!\left(
+2n,\;
+b_n \left(\frac{R}{R_e}\right)^{1/n}
+\right)
+}{
+\Gamma(2n)
+}.
+\end{equation}
+The root of the equation
+\begin{equation}
+    M(<r_{inf})-2(M_1+M_2)=0
+\end{equation}
+is obtained numerically by bisection and holds $r_{inf}=0.47pc$.\\On the other hand, Jeans equation provides a way to compute the velocity dispersion and in case of spherical distributions it greatly simpifies to
+\begin{equation}\label{Jeans velocity dispersion equation}
+\sigma^2(r) =
+\frac{1}{\rho(r)}
+\int_r^\infty
+\rho(s)\,\frac{G M(<s)}{s^2}
+ds.
+\end{equation}
+The integral leads to $\sigma_{inf}=$32.6km/s.
+As both $\sigma(r)$ and the circular speed $V_c(r)=\sqrt{GM(<r)/r}$ depend on $M(<r)$, previously obtained, we can derive them and Figure \ref{sigma/Vc NGC205} displays their ratio as afunction of the radius.  
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_Vc_over_sigma_profile.png}
+    \caption{NGC 205 $V_c/\sigma$ vs r}
+    \label{sigma/Vc NGC205}
+\end{figure}
+
+The last quantity we have to specify in order to implement the hybrid model is the binary hardening radius $a_h$; indeed Sesana \cite{Sesana_2006} found out from 3-body scattering experiments that $H$ and $K$ functions can be fitted to
+ \begin{equation}
+     H=A(1+a/a_0)^\gamma
+\end{equation}
+and
+ \begin{equation}
+    K=A(1+a/a_0)^\gamma+B
+\end{equation}
+The parameters of the fits to H and J are listed in Tables 1 and 2 of \cite{Sesana_2006} for different binary mass ratios and eccentricity; there, $a_0$ is given in $a_h$ units, thus forcing us to determine it. In literature several definitions have been proposed; hereafter, we will be using
+\begin{equation}\label{a_h dynamical definition}
+    a_h\approx \frac{GM_2}{4\sigma^2},
+\end{equation}
+unless otherwise stated. This definition leads to $a_h\approx 0.04 pc$.\\We can finally proceed and numerically integrate the set of equations \ref{da/dt Un+GW} and \ref{de/dt Un+GW} by means of R-K(4). For the temporal evolution to be properly resolved from the initial configuration to the coalescence of the binary, the time step adjusts itself at each iteration, thus taking care of whether the dominant timescale is set by stellar hardening or GWs hardening at that time.\\By defining 
+\begin{equation}
+    \Delta t_i=\epsilon \cdot min\left(\frac{a}{|da/dt|_u},\frac{a}{|da/dt|_{gw}}\right),
+\end{equation}
+where $\epsilon\sim 10^{-3-4}$, and the initial conditions $(a_0,e_0)=(15pc, 0.7)$, the integration returns $a(t)$ and $e(t)$.\\They are shown in Figure \ref{NGC205 a vs t} and \ref{NGC205 e vs t}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_a_vs_t.png}
+    \caption{NGC 205 a vs t}
+    \label{NGC205 a vs t}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_e_vs_t.png}
+    \caption{NGC 205 e vs t}
+    \label{NGC205 e vs t}
+\end{figure}
+
+The estimeted coalescence time is $t_{coal}=13.15 Myr$; it is of the same order of magnitude of\cite{Khan_2021} and \cite{Holley-Bockelmann_2025} predictions of $t_{coal}=74Myr$.\\$\mathbf{NOTE}$: Khan estimate comes from N-body simulations and in the special case of NGC 205 a costant value of eccentricity $e=0.39$ is assumed for the late evolution of the binary.\\Assuming a reliable time (universal time) at which the binary is in the configuration $(a_0,e_0)$ it might be interesting to get an estimate of the corresponding $z_{coal}$ from
+\begin{equation}
+t(z) = \int_z^{\infty}
+\frac{dz'}{(1+z')H(z')}
+\end{equation}
+and compare it with LISA upper limit $(z\sim20)$, hence addressing the problem of a possible detection.\\If the binary is in the initial configuration at $z\approx 10$, it will coalesce at $z\approx 9.4$.
+
+\subsection{Cosmic Size Evolution Down to NGC 205}
+Here, we explore the importance of the existence of NSC to the binary evolution and coalescence time. A such structure is expected to drastically reduce the time taken by system to merge as a consequence of the larger number of stars capable of passing close to the binary.\\In this spirit, we will be referring to the same parameters table a procedure of the prevois SubSection but the NSC which is artificially removed from the dwarf galaxy; hence, the only stellar background affecting binary evolution is the stellar bulge.\\By repeating the same analysis and setting $(t_0,a_0,e_0)=(0yr,15pc,0.7)$, we show Figure \ref{NGC205 bulge a vs t plot} and \ref{NGC205 bulge e vs t plot}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_Bulge_a_vs_t.png}
+    \caption{}
+    \label{NGC205 bulge a vs t plot}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_Bulge_e_vs_t.png}
+    \caption{}
+    \label{NGC205 bulge e vs t plot}
+\end{figure}
+
+Now $t_{coal}=14.93 Gyr$, almost three orders of magnitude longer than the NSC scenario.\\Following Ono cosmic size evolution relation $R_{eff}(z)=R_{eff}(z=0)(1+z)^{-1.22}$ \cite{Ono_2023}, we take NGC 205 as a $z=0$ reference model and we discuss the evolution of the same IMBH binary inside its plausible progenitors distributed between $z=1$ and $z=20$. All galaxies share same bulge mass and Sersic index; density profiles differ from each other only because of the different effective radius as diplayed in Figure \ref{Cosmic size density plot}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_density_profile.png}
+    \caption{}
+    \label{Cosmic size density plot}
+\end{figure}
+High redshift galaxies tend to be more compact than low redshift counterparts.\\Hardening radii are easly derived from these profiles according to Equation \ref{a_h dynamical definition} and a comparison between different hosts H and K functions- see Figure \ref{Cosmic size H plot} and \ref{Cosmic size K plot}- suggest that IMBH binary becomes "hard" at lower separation if embedded in a denser environment.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_H_unbound.png}
+    \caption{}
+    \label{Cosmic size H plot}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_K_unbound.png}
+    \caption{This family of functions is obtained evaluating $K(a,e)$ of each galaxy at their mean hardening radius.}
+    \label{Cosmic size K plot}
+\end{figure}
+We present in Figure \ref{Cosmic size a vs t plot} and \ref{Cosmic size e vs t plot} the evolutionary tracks of a sample of galaxies obtained by applying RK(4) to the Equations (\ref{da/dt Un+GW}) and (\ref{de/dt Un+GW}) and initial condition $(t_,a_0,e_0)=(0yr,15pc,0.7)$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_a_vs_t.png}
+    \caption{}
+    \label{Cosmic size a vs t plot}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_e_vs_t.png}
+    \caption{}
+    \label{Cosmic size e vs t plot}
+\end{figure}
+
+
+\begin{table}[htbp]
+\centering
+\caption{Galaxies coalescence time grid (Gyr)}
+\label{tab:example}
+\begin{tabular}{ll}
+\toprule
+z & $t_{coal}$ (Gyr) \\
+\midrule
+ 1  &  3.24728387   \\
+ 2  &  1.334011  \\
+ 3  &  0.7072763  \\
+ 4  &  0.43164087  \\
+ 5  &  0.28805534  \\
+ 6  &  0.20450559  \\
+ 7  &  0.15193439  \\
+ 8  &  0.11686942  \\
+ 9  &  0.09240003  \\
+ 10 &  0.07469761 \\
+ 11 &  0.06150781 \\
+ 12 &  0.05143637 \\
+ 13 &  0.04358488 \\
+ 14 &  0.03735426 \\
+ 15 &  0.03233322 \\
+ 16 &  0.02823207 \\
+ 17 &  0.02484224 \\
+ 18 &  0.02201059 \\
+ 19 &  0.01962278 \\
+ 20 &  0.01759202 \\
+\bottomrule
+\end{tabular}
+\end{table}
+We note that higher compactness tends to compensate the effects of NSC removal in terms of the coalescence time.\\Lastly, we modifiy the initial time $t_0$ of each run, turning it into $t(z)$, thus focusing on the possibility of coalescence within the present time and consequently a potential GWs observation.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Galaxies_a_vs_t_from_t(z).png}
+    \caption{}
+    \label{Cosmic size a vs t from t(z) plot}
+\end{figure}
+ 
+Therefore, forming in tha past at $z>0$, they all merge before the present time.
+
+
+
+
+
+
+
+
+
+
+

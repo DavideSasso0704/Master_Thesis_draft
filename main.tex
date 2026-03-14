@@ -1,0 +1,311 @@
+%\documentclass[12pt,twoside]{book}
+\documentclass[12pt,twoside,openany]{book}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Encoding and language
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout
+
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics
+
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{cancel}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphics and tables
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\graphicspath{{Thesis_images/}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boxes
+
+\usepackage{tcolorbox}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header / Footer
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\setlength{\headheight}{15pt}
+
+\fancyhead[LE]{\thepage}
+\fancyhead[RO]{\thepage}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+
+\fancypagestyle{plain}{
+  \fancyhf{}                      % pulisce tutto
+
+  \fancyfoot[C]{\thepage}         % numero centrato in basso
+
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperref (sempre quasi alla fine)
+
+\usepackage{hyperref}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+
+\usepackage{csquotes}
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  maxcitenames=2,
+  mincitenames=1,
+  maxbibnames=99
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contents
+
+\usepackage{tocloft}
+\renewcommand{\cftchapaftersnum}{\space}
+\renewcommand{\cftchapnumwidth}{8em}
+\renewcommand{\cftchappresnum}{CHAPTER.~}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapters Layout
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\centering}                % allineamento
+  {\Huge\thechapter}          % numero capitolo
+  {1ex}                       % spazio tra numero e titolo
+  {\Large\scshape}            % stile titolo
+  [\vspace{1ex}\rule{1.0\textwidth}{0.4pt}]  % linea sotto
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enumeration style
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% border issues
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\includeonly{Chapter_1}
+
+%\includeonly{Chapter_2}
+
+%\includeonly{Chapter_3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{document}
+
+
+
+\pagestyle{empty}
+
+\begin{center}
+    {\Large\bfseries Abstract}
+\end{center}
+
+\vspace{1cm}
+
+
+
+\clearpage
+
+
+
+
+
+\tableofcontents
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+
+
+
+It is now widely accepted that massive galaxies harbor supermassive black holes (SMBH) in the mass range $10^4-10^{10}M_\odot$ (e.g. \parencite{Magorrian_1998}) , whose existence alter both the formation and the evolution of the host itself. 
+Over the last decade, since the very first detection of a Gravitational wave (GW) signal, a new way of probing these ubiquitous objects has been extesnively explored with the help of ground-based observatories (VLK) and motivated the planned new generation LISA and ET facilities. These are expected to extend  our window of detectability of these physical signatures to lower frequencies, revealing a new population of low-frequency gravitational-wave sky sources and opening new frontiers to the Multi-Messanger Astrophysics.
+%\clearpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\include{Chapter_1}
+
+
+
+\include{Chapter_2}
+
+
+
+\include{Chapter_3}
+
+
+
+\include{Chapter_4}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\appendix
+\renewcommand{\cftchappresnum}{APPENDIX~}
+\renewcommand{\cftchapnumwidth}{9em}
+
+\chapter{Physics Equation}
+
+\chapter{Numerical Methods}
+\section{Runge-Kutta (4)}
+Given the first order autonomous ODE 
+\begin{equation}
+    \frac{du}{dt}=f(u),
+\end{equation}
+the stability anylisis of RK (4) applied to this equation leads to the following stability criterion on the time step size when $f(u)=au$:
+\begin{equation}\label{RK (4) stability}
+    \Delta t \le \frac{2.79}{|a|}.
+\end{equation}
+A system of first order autonomous ODEs can be written in vectorial form as:
+\begin{equation}
+    \mathbf{u}'=\mathbf{f}(\mathbf{u}).
+\end{equation}
+At linear order, the stability analysis we are allowed to perform the stability analysis to the linearized system
+\begin{equation}
+    \delta \mathbf{u}'=\mathbf{J}\delta \mathbf{u},
+\end{equation}
+where $\lambda_i$ is the i-th eigenvalue of the jacobian matrix $\mathbf{J}=\partial \mathbf{f}/\partial \mathbf{u}$.\\In the eigenvectors frame, equations look like
+\begin{equation}
+    \delta u'_i=\lambda_i\delta u_i\qquad\forall i=1,N
+\end{equation}
+and according to Equation (\ref{RK (4) stability}), one would get 
+\begin{equation}
+    \Delta t_i \le \frac{2.79}{|\lambda_i|} \qquad \forall i=1,N.
+\end{equation}
+Therefore, for a system of N Equations, a proper choice of the time step should be
+\begin{equation}
+    \Delta t=\epsilon \cdot min\left \{\frac{2.79}{|\lambda_i|}\right\} \qquad \forall i=1,N
+\end{equation}
+with $\epsilon\le 1$.
+
+
+
+\printbibliography
+
+
+\end{document}

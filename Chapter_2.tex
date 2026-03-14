@@ -1,0 +1,481 @@
+\chapter{A Hybrid Approach to Binary Evolution}
+
+
+
+\section{Quinlan Formalism}
+\subsection{Introduction}
+In this work, binary evolution embedded in a fixed stellar background problem is addressed in a hybrid fashion providing a self consistent analytical framework where dimensioless rates are directely estimated from scattering experiments.\\Scattering experiments are carried out for the restricted three-body problem and proceed until either the binary coalesce or stellar ejection has become so important that the host galaxy can no longer be considered fixed.\\Three dimensionless quantities $(H,K,J)$ are measured from numerical experiments and defined as:
+\begin{equation}\label{H Q96}
+    H=\frac{\sigma}{G\rho}\frac{d}{dt}\left(\frac{1}{a}\right),
+\end{equation}
+
+\begin{equation}\label{K Q96}
+    K=\frac{de}{d\ln({1/a})}
+\end{equation}
+and 
+\begin{equation}\label{J Q96}
+    J=\frac{1}{M_{12}}\frac{dM_{ej}}{d\ln({1/a})}.
+\end{equation}
+Equations (\ref{H Q96}), (\ref{K Q96}) and (\ref{J Q96}) introduce the so called dimensionless hardening
+rate H, eccentricity growth rate K and mass loss rate. Once $(H,J,K)$ are obtained from scattering experiments, the system of coupled differential equations can be solved for the binary semi-major axis, eccentricity and ejected mass time derivatives and numerical methods will eventually return their evolution within the fixed galaxy model of interest.
+
+
+
+\subsection{Quinlan Scattering Experiments}
+Although stars approach the binary with a wide velocity distribution, consistent with the adopted $\sigma$, simulations are performed considering a unique value of the velocity at infinity (thus are $\mathbf{UNBOUND}$) then accounting for a Maxwellian distribution \cite{Quinlan_1996}.\\This semplification leads to the estimate of the so called $H_1(v)$ first, which thus allows to obtian $H(\sigma)$ by integration over all possible velocities and weighted by MB distribution.\\Therefore from each scattering experiment is measured the dimensionless energy change 
+\begin{equation}\label{C quinlan}
+    C=\frac{a\Delta E_*}{G\mu}
+\end{equation}
+and is then avereged over binary orientation $(4\pi)$ and phase $(2\pi)$.\\By introducing the quantity
+\begin{equation}
+    b_0^2=\frac{2GM_{12}a}{v^2}
+\end{equation}
+in order to work with the dimensionless impact parameter $x=b/b_0$, finally:
+\begin{equation}
+    H_1=\frac{1}{\pi b_0^2}\int db2\pi b 4 \pi \langle C\rangle=8 \pi \int dx\quad x \langle C\rangle\equiv8\pi I_x(C).
+\end{equation}
+Similarly, assuming a given velocity for scattering experiments, the eccentricity growth rate $K$ is obtained from $K_1$.\\The differentiation of
+\begin{equation}
+    e^2=1+\frac{2EL^2}{\mu(GM_{12})^2}
+\end{equation}
+returns
+\begin{equation}
+    \frac{\Delta e}{\Delta ln(1/a)}=\frac{1-e^2}{2e}\left[-2\left(\frac{E}{\Delta E}\right)\left(\frac{\Delta L_z}{L_z}\right)-1\right]=\frac{1-e^2}{2e}(B-C),
+\end{equation}
+where B is the dimensionless angular momentum change defined as 
+\begin{equation}\label{B quinlan}
+    B\equiv-\frac{M_{12}}{m_*}\frac{\Delta L_z}{L_z}.
+\end{equation}
+Finally, integrating over all possible impact parameter, angles and normalizing the result, $K_1$ can be computed as
+\begin{equation}
+    K_1=\frac{\int dx\quad xC(x)\langle \frac{\Delta e}{\Delta ln(1/a)}\rangle}{\int dx\quad xC(x)}=\frac{(1-e^2)}{2e}\left[\frac{I_x(B-C)}{I_x(C)}\right].
+\end{equation}
+$\mathbf{NOTE}$:During three-body encounters, star-binary energy and angular momentum exchange ensures the conservation of both of them; thus the binary evolution can be inferred from stellar orbial properties evolution.
+
+
+The initial setup of each scattering experimet is completely fixed by the following $d=5$ uniformly distributed- within a proper interval- parameters :
+\begin{enumerate}
+    \item $b^2$ rather than $b$ because $t_{coll}\propto \lambda\propto \sigma^{-1}\propto b^{-2}$. Thus reproducing correctly the encounter rate.
+    \item  cosine of the inclination: angle between binary $\mathbf{L}$ and $\mathbf{v}(-\infty)$.
+    \item  longitude of ascending node: azimuthal angle of $\mathbf{v}(-\infty)$ in $\mathbf{L}$ equatorial plane
+    \item  the argument of pericenter (point of closest approach): it fixes ellipse orientation over the orbital plane
+    \item  the mean anomaly to specify BHs position along the ellipse at a given time.
+
+\end{enumerate}
+
+Once these parameters are drawn and convinient coordinates are adopted, the numerical integration starts at binary-star separation $r=50a$ and is stopped when the star leaves this sphere around the binary with posity energy, hence recording the main quantities of interest.\\Systematic errors arise from approximations used in order to semplify the numerical simulation, for istance: assuming keplerian orbit outside that sphere, thus stopping at zero order term in multipole expansion.\\Statistical errors in any average quantity scale, at large number of scatterings N, as $(ln\quad N)^d/N$ because quasi-random numbers are used.\\$H_1$ is measured for a wide range of masses ratio and eccentricity and fitted with the two free-parameters model
+\begin{equation}
+    H_1(v)=H_0(1+(v/w)^4)^{-1/2}.
+\end{equation}
+
+
+
+
+$\mathbf{NOTE}$: "This fits the data well at high and low velocities. It does not fit so well when $H_1$ first starts to decrease"
+
+Similarly $K_1$ is derived as a function of "e" and fitted with the following three parameters model:
+\begin{equation}
+    K_1(e)=e(1-e^2)^{k_0}(k_1+k_2e)
+\end{equation}
+$\mathbf{NOTE}$: $H_1$ is a function of v only while $K_1$ on both e and v.
+
+
+All free parameters are obtained for different masses ratio.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{H_1.png}
+    \caption{This plot shows that $H_1$ is almost indipendet of the eccentricity.}
+    \label{H_1 quinlann}
+\end{figure}
+
+$\mathbf{NOTE:}$ in Sesana 2010, Fig \ref{H_1 quinlann} is reported as H vs a but this agrees with the functional form of $H_1$ and $V_{bin}=\sqrt{GM_{12}/a}$.\\Therefore, the hardening rate for a circular binary have been used for all eccentricities.
+
+\subsection{Aplication to a galaxy model}
+Once stellar density $\rho$ and velocity dispersion $\sigma$ are specified, the binary BH is introduced at center of the system with a given initial eccentricity $e_0$ and separation $a_0$ such that $V_{bin}=\sigma/5$.\\The last  corresponds to a condition about $a_0$ which is model indipendent and for the binary to be soft at beginning of the integration; a BH binary is indeed called hard 
+if it hardens at a constant rate, that is if $\sigma\ll \omega$ or equivalently
+if $V_{bin}/\sigma \gg (1+m_1/m_2)^{1/2}$.\\Peters (1964) equation for gravitational wave emission
+\begin{equation}
+    \frac{da}{dt} = -\frac{64}{5} \frac{G^3 \mu m^2}{c^5 a^3} \frac{1}{(1 - e^2)^{7/2}} \left( 1 + \frac{73}{24}e^2 + \frac{37}{96}e^4 \right)
+\end{equation}
+
+\begin{equation}
+    \frac{de}{dt} = -\frac{304}{15} \frac{G^3 \mu m^2}{c^5 a^4}  \frac{e}{(1 - e^2)^{5/2}} \left( 1 + \frac{121}{304}e^2 \right)
+\end{equation}
+are considered as well in order to compute $da/dt$ and $de/dt$.\\Despite $dM_{ej}/dt$ is computed, a and e evolution can be assumed to occur in a fixed background whenever this is negligible; the ejected mass hardly exceeds a few times $M_{12}$.\\Neverthless, the stellar mass ejection makes the binary hardening less and less efficient; once nearby stars are expelled, the hardening rate depends on the diffusion of stars back into the "Loss cone" due to two-body relaxation.\\If stars removal is efficient, correction to the density profile must be applied assuming a given rate for the process above.\\Fig.\ref{a and e quinlan} shows that the binary evolves mainly through three phases separated by two trashold destances:\begin{enumerate}
+    \item $a_h=\frac{Gm_2}{4\sigma^2}$
+    \item $a_{gw}$
+\end{enumerate}
+Quasi-circular binaries ($e_0<0.3$) remain circular with little e-growth before entering the GWs emission domain, while eccentricity increment is more important if $e_0>0.3$.
+
+
+
+
+
+
+\newpage
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{a_and_e_quinlan.png}
+    \caption{Eccentricity evolution. The solid line is the same as
+in Fig. 7(a); the other lines assume initial eccentricities of 0.3
+(dotted), 0.5, 0.7, and 0.9 (dashed-dotted).}
+    \label{a and e quinlan}
+\end{figure}
+
+
+
+
+\section{Sesana Hybrid Model}
+
+\subsection{Sesana Scattering Experiments}
+This work \cite{Sesana_2006} is aimed at unvieling by  full three-body scattering experiments how a population of HVS form as a result of the interaction between a MBHB and ambient stars, unbound to the binary, drawn from a MB distribution . Other than the dynamical properties of these HVS, binary hardening, mass ejection rate and eccentricity growth rate $(H,J,K)$ are tracked by numerical simulations.\\Dynamical friction is efficient (especially in wet major mergers) in dragging two  massive BHs towards the innermost region of the new formed galaxy; over the time scale $t_{df}$ the binary forms and hardens  through gravitational slingshot, hence ejecting low angular momentum stars passing close to the binary. \\Following Q96 approach, the equations defining $(H,J,K)$ are (\ref{H Q96}),(\ref{J Q96}) and (\ref{K Q96}).\\At odds with Q96, where three-body scattering experiments are conducted for a fixed impact velocity, varying the binary separation and then averaging over the Maxwellian distribution, now the separation is fixed, i.e. $V_c=(GM_{12}/a)^{1/2}=const$, and the quantity $v/V_c$ is sampled over four decades, corresponding to a sampling of about four decades in binary separation.\\Each run is set by the inital configuration, corrseponding to a point in the parameter space $(q,e_0)$; the combination of binary masses ratio $q=1,1/3,1/9,1/27,1/81,1/243$ and initial eccentricity $e_0=0.01,0.3,0.6,0.9$ leads to 24 runs, involving $4\cdot10^6$ stars each.\\The (Maxwellian averaged) rates H, J,
+and K derived from scattering experiments are fitted by the following functions
+
+
+ \begin{equation}
+     H=A(1+a/a_0)^\gamma
+\end{equation}
+
+ \begin{equation}
+    J=A(a/a_0)^\alpha [(1+(a/a_0)^\beta]^\gamma
+\end{equation}
+
+\begin{equation}
+    K=A(1+a/a_0)^\gamma+B.
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{H_Sesana2006.png}
+    \caption{Binary hardening rate H (averaged over a Maxwellian velocity
+distribution) vs. $a/a_h$. Left: $e= 0, 0.3, 0.6, 0.9$ for $q=1$. Right: q ¼ 1/3, 1/9,
+1/27, and 1/81 for e ¼ 0. Line style as in Fig. 1}
+    \label{H Sesana 2006}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{K_Sesana2006.png}
+    \caption{Eccentricity evolution. The solid line is the same as
+in Fig. 7(a); the other lines assume initial eccentricities of 0.3
+(dotted), 0.5, 0.7, and 0.9 (dashed-dotted).}
+    \label{K Sesana 2006}
+\end{figure}
+Figure \ref{H Sesana 2006} shows that the hardening rate is nearly constant when $a<a_h$, in perfect agreement with Q96 results. Therefore hard binary can be characterised by a costant hardening rate. Additionally, $H$ decreases with $q$ (asymmetric binaries harden faster) and increases with eccentricity (circular binaries harden more slowly).\\As reported in Figure \ref{K Sesana 2006}, $K$ is close to zero at any binary separation for circular binary; if the binary is eccentric at $a_h$ already, then K (and $e$) increases monotonically with binary shrinking.\\$\mathbf{NOTE}$: in this paper the binary shrinking is studied taking into account gravitational slingshot on UNBOUND stars passing close to binary and ejected at higher velocity. In particular:
+\begin{enumerate}
+    \item the ejection criterion relies on the stellar background model (here SIS stellar Bulge is considered)
+    \item The stellar background is assumed to be fixed; this approximation holds if the ejected mass does not exceed a trashold
+    \item Binary shrinking requires low angular momentum stars as they havo to pass closer and closer to the binary BHs for slingshot to be effective; however from $a<a_h$ the fraction of stars with these properties, populating the so called "Loss cone", is very small. Being depletd by three-body encounters, binary hardening when binary is hard depends on the efficiency of loss cone refilling.
+\end{enumerate}
+ 
+Bound stars \cite{Sesana_2008}     ,\cite{Sesana_2010}
+\newpage
+\subsection{Sesana 2010 Results and  Comparison}
+As confirmed by observations of galaxies hosting a dynamically evolved BH binary, stellar scouring by binary hardening seems to imprint an inner cusp to the original stellar background. Motivated by this emerging picture, Sesana \cite{Sesana_2010} adopted a stellar density profile matching a SIS outside the binary influence radius $r_{inf}$ and a power low distribution inside; in formulae:
+\begin{flushleft}\label{Sesana_2010 stellar cusp profile}
+  $
+  \left\{
+  \begin{aligned}
+  \rho(r)=\rho_{inf}\left(\frac{r}{r_{inf}}\right)^{-\gamma} \qquad if \quad r<r_{inf}\\
+  \\ \rho(r)=\frac{\sigma^2}{2\pi G r^2} \qquad if \quad r>r_{inf}
+  \end{aligned}
+  \right.
+  $
+  \end{flushleft}
+Here $\sigma$ indicates the radius-indipendent velocity dispersion of SIS model and it assumed to be a function of binary mass $M=M_1+M_2$, such that $q=M_2/M_1<1$, through \cite{Tremaine_2002}
+\begin{equation}\label{Tremaine_2002 M_bh}
+    M_6=0.84\sigma_{70}^4.
+\end{equation}
+Dynamical friction is efficient in dragging two BHs down to the separation $a_0$ at which the enclosed stellar mass
+in the binary is twice the mass of the secondary BH, i.e.  
+\begin{equation}\label{Sesana_2010 a_0}
+    a_0=(3-\gamma)\frac{GM}{\sigma^2}\left(\frac{q}{1+q}\right)^{1/(3-\gamma)}=r_{inf}\left(\frac{q}{1+q}\right)^{1/(3-\gamma)},
+\end{equation}
+and is adopted as starting point of the numerical integration.\\Hereafter, three competing mechanisms are involved:
+\begin{enumerate}
+    \item Bound cusp erosion:
+    \begin{equation}\label{Sesana_2010 da/dt BOUND}
+    \left.\frac{da}{dt}\right|_{b} = -\frac{2a^2}{G M_1 M_2} \int_0^\infty \Delta \mathcal{E}\frac{d^2 N_{\mathrm{ej}}}{da_\star dt} da_\star
+\end{equation}
+
+\begin{equation}\label{Sesana_2010 de/dt BOUND}
+    \left.\frac{de}{dt}\right|_{b}= \int_0^\infty \Delta e \frac{d^2 N_{\mathrm{ej}}}{da_\star dt} da_\star
+\end{equation}
+    
+\item   Slingshot of unbound stars:
+\begin{equation}
+    \left.\frac{da}{dt}\right|_{u} = -\frac{a^2 G \rho}{\sigma} H
+\end{equation}
+
+\begin{equation}
+    \left.\frac{de}{dt}\right|_{u} = \frac{a G \rho}{\sigma} H K
+\end{equation}
+
+\item Gravitational waves emission \cite{Peters_1963}:
+\begin{equation}
+    \left.\frac{da}{dt}\right|_{\mathrm{GW}} = -\frac{64}{5} \frac{G^3}{c^5} \frac{M_1 M_2 M}{a^3 (1 - e^2)^{7/2}} \left( 1 + \frac{73}{24} e^2 + \frac{37}{96} e^4 \right)\equiv -\frac{64}{5} \frac{G^3}{c^5} \frac{M_1 M_2 M}{a^3}F(e)
+\end{equation}
+
+
+\begin{equation}
+    \left.\frac{de}{dt}\right|_{\mathrm{GW}} = -\frac{304}{15} \frac{G^3}{c^5} \frac{M_1 M_2 M}{a^4 (1 - e^2)^{5/2}} e \left( 1 + \frac{121}{304} e^2 \right)
+\end{equation}
+
+\end{enumerate}
+Being indipendet of each other, by superposition, we can put
+the pieces together and the evolution of the binary obeys to
+
+
+\begin{equation}\label{Sesana_2010 da/dt TOT}
+    \frac{da}{dt} = \sum_i \left.\frac{da}{dt}\right|_i
+\end{equation}
+
+\begin{equation}\label{Sesana_2010 de/dt TOT}
+    \frac{de}{dt} = \sum_i \left.\frac{de}{dt}\right|_i.
+\end{equation}
+Besides, an equal number of regimes can be introduced whereby one single mechanism is dominant over the others; lengthscale boundaries are $a_0$,
+\begin{equation}\label{Sesana_2010 a_h}
+    a_h\approx\frac{1}{4(3-\gamma)}\left(\frac{q}{1+q}\right)^{(2-\gamma)(3-\gamma)}
+\end{equation}
+and 
+\begin{equation}
+    a_{GW}=4\left[\frac{128\pi(3-\gamma) F(e)}{5H}\right]^{1/5}\frac{\sigma}{c}q^{-4/5}(1+q)^{3/5}a_h
+\end{equation}
+respectively.\\We recall that
+\begin{equation}\label{Sesana_2010 rho_inf}
+    \rho_{inf}=\frac{\sigma^2}{2\pi G r_{inf}^2}
+\end{equation}
+and that setting $\rho=\rho_{inf}$ inside Equation (\ref{da/dt UNBOUND}) is equivalent to impose a full loss-cone outside the binary sphere of influence during the unbound phase; the effects due to different normalizations could be explored.\\Sesana \cite{Sesana_2010} explored a relatively wide region of the phase space related to the initial configuration of the binary; here, we report the comparison between Sesana and our evolutionary track for $(q,\gamma,e_0,M)=(1,1.5,0.1,10^5 M_\odot)$.\\This kind of configuration, among the analyzed ones, is quite relevant to our studies on IMBH binaries at high z as they are expected to be more symmetric then their local universe cousins. As pointed out at the end of Section \ref{sec:Loss Cone}, $a_h$ and $r_{inf}$ are of the order of $\sim GM/\sigma^2$ and the bound cusp erosion process can be suppressed at first istance.\\The estimate of the hardening radius, below which $a_h$ is nearly costant, and the best fitting parameters in Table 1 \cite{Sesana_2006} allows us to find 
+ \begin{equation}\label{Sesana_2006 H fit}
+     H=A(1+a/a_0)^\gamma;
+\end{equation}
+the function is shown in Figure \ref{Sesana comparison H plot}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{H_vs_a.png}
+    \caption{H as a function of $a$ expressed in $a_h$ units.}
+    \label{Sesana comparison H plot}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Sesana_2006_Table_1.png}
+    \caption{Note: $a_0$ is given in $a_h$ units.}
+    \label{Sesana_2006_Table_1}
+\end{figure}
+Similarly, by interpolation over the eccentricty grid of Table 3 \cite{Sesana_2006} parameters, it is obtained
+ \begin{equation}\label{Sesana_2006 K fit}
+    K=A(1+a/a_0)^\gamma+B.
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Sesana_2006_Table_3.png}
+    \caption{Note: $a_0$ is given in $a_h$ units.}
+    \label{Sesana_2006_Table_3}
+\end{figure}
+
+Figure \ref{A of K fit Sesana comparison},\ref{a_0 of K fit Sesana comparison}, \ref{gamma of K fit Sesana comparison} and \ref{B of K fit Sesana comparison} report the results of this mathematical operation.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{A_K_vs_e.png}
+    \caption{$A$ as a function of $e$ derived by interpolation of grid points.}
+    \label{A of K fit Sesana comparison}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{a0_K_vs_e.png}
+    \caption{$A$ as a function of $e$ derived by interpolation of grid points.}
+    \label{a_0 of K fit Sesana comparison}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{gamma_K_vs_e.png}
+    \caption{$\gamma$ as a function of $e$ derived by interpolation of grid points.}
+    \label{gamma of K fit Sesana comparison}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{B_K_vs_e.png}
+    \caption{$B$ as a function of $e$ derived by interpolation of grid points.}
+    \label{B of K fit Sesana comparison}
+\end{figure}
+
+Therefore, at odds with $H$, $K$ is a function of $(a,e)$; we list below the plots of the 1-D functions $K(a)=K(a,e_0)$ and $K(e)=K(a_h,e)$.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{K_vs_a.png}
+    \caption{}
+    \label{K vs a Sesana comparison}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{K_vs_e.png}
+    \caption{}
+    \label{K vs e Sesana comparison}
+\end{figure}
+We anticipate that Equations (\ref{Sesana_2010 da/dt TOT}) and (\ref{Sesana_2010 de/dt TOT}) will be integrated with the help of RK(4) and $dK/de$ is needed as well; Figure \ref{dK/de vs e Sesana comparison} depicts the step-like function.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{dK_de_vs_e.png}
+    \caption{}
+    \label{dK/de vs e Sesana comparison}
+\end{figure}
+The time step is adjusted at each iteration according to the prescription
+\begin{equation}
+    \Delta t \le  min\left \{\frac{2.79}{|\lambda_i|}\right\} \qquad \forall i=1,N
+\end{equation}
+where $\lambda_i$ are the Jacobian $\mathbf{J}$ eigenvalues. The elements of this matrix are:
+\begin{equation}\label{J_11 of Sesana comparison}
+    J_{11}=\left. \frac{da}{dt}\right|_u\left(\frac{2}{a}+\frac{\gamma}{a+a_0a_h}\right)-\left.\frac{da}{dt}\right|_{gw}\left(\frac{3}{a}\right)
+\end{equation}
+
+
+\begin{equation}\label{J_12 of Sesana comparison}
+    J_{12}=\left. \frac{da}{dt}\right|_{GW}\left(\frac{{7e}}{1-e^2}+\frac{73e/12+37e^3/24}{1+73e^2/24+37e^4/96}\right)
+\end{equation}
+
+
+
+
+
+\begin{equation}\label{J_21 of Sesana comparison}
+    J_{21}=\left.\frac{de}{dt}\right|_u\left(\frac{1}{a}+\frac{\gamma_H}{a+a_{0,H}a_h}+\frac{\gamma_K}{a+a_{0,K}a_h}\right)-\left.\frac{de}{dt}\right|_{GW}\left(\frac{4}{a}\right)
+\end{equation}
+
+
+\begin{equation}\label{J_22 of Sesana comparison}
+    J_{22}=\left.\frac{de}{dt}\right|_u\left(\frac{\partial \ln{K}}{\partial e}\right)+\left.\frac{de}{dt}\right|_{GW}\left(\frac{5e}{1-e^2}+\frac{1+363e^2/304}{e+121e^3/304}\right)
+\end{equation}
+
+
+In order to compare Sesana predictions with our model we set $(t_0,a_0,e_0)$ for the unbound phase to be effective and selecting these values directely from Sesana plot: $(t_0,a_0,e_0)=(12Myr,0.05\cdot a_0, 0.131 )$.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{a_vs_t_check.png}
+    \caption{}
+    \label{a vs t Sesana comparison}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{e_vs_t_check.png}
+    \caption{}
+    \label{e vs t Sesana comparison}
+\end{figure}
+
+Figure \ref{a vs t Sesana comparison} and \ref{e vs t Sesana comparison} indicate a good agreement between our model and Sesana one. In the first plot $a$ decreases more slowly than Sesana prediction as we are negletting the bound cusp erosion contribute, which hardens the binary even when the unbond phase takes over at $\sim a_h$. On the other hand eccentricity reaches a lower peak compared to the reference model because of bound cusp erosion leads to $e$ growth as well.\\Furthermore, we test the feedback of the various shrinking mechanisms by assuming them working in isoletion, hence suppressing all the others.
+
+Figure \ref{a_vs_t_UN} and \ref{e_vs_t_UN} refers to the evolution under the effect of slinghot of unbound stars; as the initial separation is below $a_h$ we can appreciate the expected linear decay of $a$ and the overall eccentricity growth. 
+\begin{figure}[H]
+    \centering
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{a_vs_t_UN.png}
+    \caption{}
+    \label{a_vs_t_UN}
+    \vspace{2mm}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{e_vs_t_UN.png}
+    \caption{}
+    \label{e_vs_t_UN}
+    \vspace{2mm}
+  \end{minipage}
+\end{figure}
+
+
+
+Figure \ref{a_vs_t_GW} and \ref{e_vs_t_GW} refers to the evolution under GWs production; this becomes effective only at very close separation and causes both the fast binary coalescence once effective and binary circularization. The coalescence time agrees perfectly to the theoretical prediction of Equation \ref{t_coal Maggiore} 
+
+
+
+
+\begin{figure}[H]
+    \centering
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{a_vs_t_GW.png}
+    \caption{}
+    \label{a_vs_t_GW}
+    \vspace{2mm}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{e_vs_t_GW.png}
+    \caption{}
+    \label{e_vs_t_GW}
+    \vspace{2mm}
+  \end{minipage}
+\end{figure}
+
+
+
+The dataset used above help us to construct another curve, precisely $(e(t,a(t)))$ which can be compared to the close form solution provided by Equation (\ref{a=a(e) Maggiore}) as shown in Figure \ref{a_vs_e_GW} and \ref{a_vs_e_Maggiore}.
+
+
+
+
+\begin{figure}[H]
+    \centering
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{a_vs_e_GW.png}
+    \caption{}
+    \label{a_vs_e_GW}
+    \vspace{2mm}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[height=5cm]{a_vs_e_Maggiore.png}
+    \caption{}
+    \label{a_vs_e_Maggiore}
+    \vspace{2mm}
+  \end{minipage}
+\end{figure}
+
+
+Below, the Figure \ref{error_a_vs_e_GW} gives us the possibility of visualizing the relative error of the numerical solution with respect to the analytical one; it turnsout to be within one part over $10^{12}$.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{error_a_vs_e_GW.png}
+    \caption{}
+    \label{error_a_vs_e_GW}
+\end{figure}
+
+

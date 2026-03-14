@@ -1,0 +1,549 @@
+\chapter{Physical Mechanisms of Binary Hardening}
+
+
+
+
+
+\section{Two-Body Relaxation and Dynamical Friction}
+Stellar systems are composed of a large number of stars, mutually interacting via their gravitational influence.\\How long it can be approximated to a smooth density profile depends on the age of that system compared to the value of the two-body relaxitation time $t_{2b}$, i.e. the time beyond which gravitational encounters alter a test particle trajectory driven by the smooth distribution potential.\\When granularity is unimportant, i.e. $t_{age}<t_{2b}$, we talk about collisionless systems, otherwise they will be referred to as collisional.\\The estimate of $t_{2b}$ would require the direct comparison of a test particle motion under the action of the true gravitational potential (that is what we would like to avoid to compute) and the one produced by the mass density profile reproducing the stellar distribution; hence, other indicators are needed.\\ Chandrasekhar (1942) approach gives an estimate of it considering
+cumulative orbital deflections under the Impulsive Approximation, that is:
+\begin{enumerate}
+    \item hyperbolic two-body interactions occur only
+    \item negligible influence of the other $N-2$ bodies during two-body encounters
+\end{enumerate}
+By defining the one particle phase space distribution function (DF) of the field stars such as
+\begin{equation}
+\rho(\mathbf{x},t)=\int_{R^3}d^3\mathbf{v}f(\mathbf{x},\mathbf{v},t),
+\end{equation}
+we will be working under the simplyfing assumption of spatially homogeneous distribution with isotropic velocity field. In this way $f$ can written as follows
+\begin{equation}
+    f(\mathbf{x_f},\mathbf{v_f})=n_fg(v_f).
+\end{equation}
+
+Two-body encounters between the test particle $m_t$ and the field star $m_f$ will induce change in some orbital property P; we quantify the rate of variation of it through the diffusion coefficient
+\begin{equation}\label{diffusion coeff def}
+    D(P)\equiv 2\pi n_f\int_\mathcal{R^3} d^3\mathbf{v_f}\|\mathbf{v_t}-\mathbf{v_f}\|g(v_f)\int_0^\infty db\langle P\rangle b;
+ \end{equation}
+where $\langle P\rangle$ indicates the angle average and $b$ the impact parameter.\\Taking advantage of the Born aproximation of small angle scattering, holding for large impact parameter or large relative velocity, the orbital parameter $P=\|\Delta v_{t\perp} \|$ reads\begin{equation}
+    \|\Delta v_{t\perp} \|\simeq \frac{2Gm_f}{vb};
+\end{equation}
+according to the definition (\ref{diffusion coeff def}) it can be obtained:
+\begin{equation}
+    D(\|\Delta v_{t\perp} \|^2)\sim 8\pi G^2m_f^2n_f\int_\mathcal{R^3}d^3\mathbf{v_f}\frac{g(v_f)}{v}\int_0^\infty \frac{db}{b}
+\end{equation}
+Two divergences arise from this treatment: the so-called ultraviolet divergence at $b=0$, appearing as a consequence of the Born approximated solution, and the infrared divergence due to numerous and weak encounters with large $b$.\\The former can be eliminated by replacing the $0$ with a finite lower limit $b_{\pi/2}$ and the latter instead setting an upper limit we expect to exist due to the finite size of real stellar systems, i.e. $b_{max}$.\\By introducing the Coulomb logarithm $ln(\Lambda)\equiv ln(b_{max}/b_{\pi/2})$, the velocity-weighted Coulomb logarithm $ln(\bar{\lambda})$ and the Rosenbluth potential
+\begin{equation}
+    \Psi(v_t)=\int_\mathcal{R^3}\frac{g(v_f)}{\|\mathbf{v_t}-\mathbf{v_f}\|}d^3\mathbf{v_f},
+\end{equation}
+it is finally possible to get an estimate of the two-body relaxitation time:
+
+
+
+
+\begin{equation}\label{t_2b}
+    t_{2b}=\frac{E_t(-\infty)}{D(\Delta E_{t\perp})}\sim \frac{v_t^3}{8\pi G^2n_fm_f^2ln\bar\Lambda}.
+\end{equation}
+
+On one hand, as just seen, two-body encounters give rise to the heating of the test particle in the direction perpendicular to the initial relative velocity, being deflected; on the other hand the same particle is slowed down by Dynamical friction as result of long range interaction \cite{Baumgardt_2006}.\\Accordingly, it can be proved that Dynamical friction timescale $t_{df}$ is
+\begin{equation}\label{t_df formula}
+    t_{df}\equiv\frac{\|\mathbf{v_t}(-\infty)\|}{D(\Delta\mathbf{v}_{t\parallel})}\sim \frac{v_t^3}{4\pi G^2n_fm_f(m_f+m_t)ln(\bar{\lambda})\Xi(v_t)}
+\end{equation}
+where $\Xi(v_t)$ is a normalized quantity, i.e. $\Xi(\infty)=1$, defined as follows
+\begin{equation}
+    \Xi(v_t)=4\pi\int_0^{v_t}g(v_f)v_f^2dv_f
+\end{equation}
+
+$\mathbf{NOTE}$: the potential $\Psi$ can be expressed in terms of a multipole like expansion; at lowest order, the monopole term dominates over the others and holds
+\begin{equation}
+    \Psi\approx\frac{\Xi(v_t)}{v_t}
+\end{equation}
+
+
+
+
+\section{Gravitational Slingshot}\label{sec:Gravitational Slingshot Effect}
+One of the major results from the restricted three-body problem study consists of the slingshot effect \cite{Mikkola_1992}. It plays an important role in shaping hyperbolic stellar orbits, unbound to a BH binary, and driving the binary shrinking.\\Let $m_t$ and $m_f$ be the test and field masses; in the mass center frame $S_{CM}$ the kinetic term related to $\|\mathbf{V_{CM}}\|$ vanishes and the total energy becomes
+\begin{equation}\label{E in S_cm }
+    E=\frac{1}{2}\mu\|\mathbf{v}\|^2-\frac{Gm_fm_t}{r},
+\end{equation}
+ where  $r\equiv \|\mathbf{x_t}-\mathbf{x_f}\|=+\infty$ and $\mathbf{v}\equiv \mathbf{v_t}-\mathbf{v_f}$ are particles relative separation and velocity respectively.\\The energy conservation at two infinity configuarations, at time $t=\pm \infty$, leads to 
+\begin{equation}\label{relative velocity modulus conservation}
+     \|\mathbf{v}(-\infty)\|=  \|\mathbf{v}(+\infty)\|.
+\end{equation}
+Eq. (\ref{relative velocity modulus conservation}) implies that, in the inertial frame with the origin coincident with $m_f$ position, $m_t$ velocity vector $\mathbf{v}(t)$ has rotated and its variation $\Delta\mathbf{v}=\mathbf{v}(+\infty)-\mathbf{v}(-\infty)$ over the interaction can be decomposed  as the sum of the components perpendicular
+and parallel to the initial relative velocity.\\Therefore, 
+\begin{equation}
+    \mathbf{v}(+\infty)=\mathbf{v}(-\infty)+\Delta\mathbf{v}_\parallel +\Delta\mathbf{v}_\perp
+\end{equation}
+
+
+and combining it with identity (\ref{relative velocity modulus conservation}) follows:
+\begin{equation}\label{slingshot negative scalr product}
+     \| \Delta\mathbf{v}_\parallel\|^2+  \| \Delta\mathbf{v}_\perp\|^2+\langle \Delta\mathbf{v}_\parallel, \mathbf{v}(-\infty) \rangle=0.
+\end{equation}
+For Eq. (\ref{slingshot negative scalr product}) to hold, the scalar product must be necessarily negative.\\These results, valid in a specific inertial frame, need to be transferred in an arbitrary inertial frame $S_0$, where both bodies may be seen moving. Here, the gravitational interaction causes both $E_t$ and $E_f$ to change but keeping $E=E_t+E_f=const$; specifically:
+\begin{equation}\label{t energy variation 1}
+    \Delta E_t=\frac{1}{2}m_t[\|\mathbf{v_t}(+\infty)\|^2-  \|\mathbf{v_t}(-\infty)\|^2]=-\Delta E_f.
+\end{equation}
+Taking advantage of velocity composition law
+\begin{equation}
+    \mathbf{v_t}(t)=\mathbf{v_{CM}}+(\mu/m_t)\mathbf{v}(t)
+\end{equation}
+and the conservation of $\mathbf{v_{CM}}$, being the system isolated, $E_t$ (\ref{t energy variation 1}) takes the form 
+\begin{equation}
+    \Delta E_t=\mu\langle \Delta\mathbf{v}, \mathbf{v_{CM}} \rangle.
+\end{equation}
+What derived so far can now be applied to the astrophysical system of interest.\\Let us consider a BH binary-star gravitational encounter and be $M_1$, $M_2$ and $m_*$ the primary, secondary BH and stellar masses respectively.\\If BH binary is strongly asymmetric, that is $q\equiv M_2/M_1\ll1$, then
+\begin{equation}\label{Primary BH approx CM}
+    \mathbf{x_{CM}}\simeq \mathbf{x_f}, \qquad\mathbf{v_{CM}}\simeq \mathbf{v_f}
+\end{equation}
+ and $M_2$ will orbit approximately around $M_1$.\\We focus on the interaction between the secondary BH and a star bound to $M_1$ and unbound to $M_2$. These objects will travel along nearly Keplerian orbits and have Keplerian velocity profile.\\Hereafter, by analogy, we put $M_2\equiv m_f$ and $m_*\equiv m_t$.\\In the inertial frame centered at the primary BH, namely $S_0$, which behavies very similarly to $S_{CM}$, the interaction involving $m_t$ and $m_f$ is assumed to be short compared to the orbital period; this semplification makes negligible the acceleration of $m_f$-$m_t$ mass center.\\Finally, two different scenarios, giving rise to different feedback on binary evolution, will be studied.
+
+\subsection{Slingshot–Driven Binary Hardening}\label{sec:Slingshot–Driven Binary Hardening}
+ Working on the same model introduced at the end of Section \ref{sec:Gravitational Slingshot Effect}, binary hardening results from gravitational slingshot when the stellar orbit is slightly bigger than secondary BH is.\\Obeying to the Keplerian velocity profile, $\|\mathbf{v_f}(-\infty) \|> \|\mathbf{v_t}(-\infty) \|$. Additionally, as $m_f\gg m_t$, it holds the approximation $\mathbf{v_{CM}}\approx \mathbf{v_f}$; as a conequence of that, $\mathbf{v}(-\infty)$ is nearly antiparallel to $\mathbf{v_{CM}}$ and $\Delta\mathbf{v}_\parallel$ can be read as the component along $\mathbf{v_{CM}}$ rather than $\mathbf{v}(-\infty)$.\\According to Eq. (\ref{slingshot negative scalr product}), we can conclude that
+\begin{equation}
+    0<\langle \Delta\mathbf{v}_\parallel, \mathbf{v_{CM}} \rangle=\langle \Delta\mathbf{v}, \mathbf{v_{CM}}\rangle=\Delta E_t/\mu.
+\end{equation}
+Therefore, the star gains energy in $S_0$ and is pushed outward, at lareger separation from the primary BH; it is worth of noticing tath if $\Delta E_t>|E_t(-\infty)|$, stellar ejection occurs.\\At same time, as dictated by energy conservation, the secondary BH loses energy, thus the orbit shriks and  binary hardens\cite{Ciotti_2021}.
+\subsection{Slingshot–Driven Binary Softening}
+Binary softening insted takes place when the secondary BH orbit is outside the stellar one.\\By repeating the same arguments, now $\mathbf{v}(-\infty)$ is nearly directed as $\mathbf{v_{CM}}$ and
+\begin{equation}
+     E_t/\mu=\langle \Delta\mathbf{v}, \mathbf{v_{CM}}\rangle=\langle \Delta\mathbf{v}_\parallel, \mathbf{v_{CM}} \rangle<0.
+\end{equation}
+On one hand the star loses energy to the binary, it is pushed inward and may undergo tidal disruption or coalescence (stellar consumption) due to primary BH; on the other hand the binary gains energy and its separation increases (binary softening).
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Stellar Scattering and Loss Cone Problem}\label{sec:Loss Cone}
+\cite{lightman_loss-cone}Let us consider a massive object $M$- it may be a BH binary- residing at center of a stellar distribution; far enough from it, stars are unbound, move with rms velocity $\langle v^2\rangle^{1/2}$ and obey to the Maxwellian distribution, i.e. velocity field is isotropic.\\Combining $M$ and the rms velocity, we define the influence radius, beyond which stars are mainly unbound, $r_a\sim 2GM/\langle v^2\rangle$. Stellar orbits are assumed to be driven by the gravity of $M$ at $r<r_a$.\\Moreover, close encounters between stars and $M$ may lead to stellar consumption via several processes; they occur on a time scale of the order of the dynamical one, i.e. one orbital period, if $r$ is smaller than the tidal radius $r_t$, where
+\begin{equation}
+    t_d=P(E)=\frac{2\pi GM}{(2|E|)^{3/2}}.
+\end{equation}
+
+A steady state solution in the range $r_t<r<r_a$ requires the rate of stars diffusing inward, crossing $r_a$, over $t_{2b}$, equal to the rate of stars consumed at $r_t$, behaving as a sink of this problem. \\If $E$ and $J$ denote respectively the star specific energy and angular momentum, it is worth of noticing  that  not only stars with low energy, i.e. $E\approx E_t\equiv -GM/r_t$ are removed but also high $E$ low $J$ might experience the same fate. At pericenter the radial velocity vanishes and 
+\begin{equation}
+    E=\frac{J^2}{2r^2}-\frac{GM}{r};
+\end{equation}
+hence a star can find itself inside $r_t$ if 
+\begin{equation}\label{loss cone definition}
+    J\le J_{min}\equiv \left[2\left(E+\frac{GM}{r_t}\right)\right]^{1/2}r_t.
+\end{equation}
+Inequality (\ref{loss cone definition}) defines the so called "Loss Cone".
+
+\subsection{Bound stars consumption}
+\subsubsection{One-Dimensional Analysis }
+As stellar orbit shape and size around $M$ are set by $E$ and $J$, the one particle DF can be written as $f=f(E,J)$ according to Jean's theorem. Therefore, the nature of the problem is 2-dmensional; neverthless, by negletting loss cone effects, an approximated one-dimensional solution can be obtained under the assumption of quasi-circular orbits where $J=J_{max}(E)=GM/\sqrt{2|E|}$.\\In this scenario the boundary conditions for bound stars at $r_t<r<r_a$ read $E_t<E<E_a$ and the DF is $f=f(E)$. The steady stae self-similar solution obtained by Peebles relies on the power law DF $f(E)=k|E|^p$ and the corresponding maximum flux of stars in the $E$ space is $F_{max}\sim N(<r)/t_{2b}(r)$.\\By definition \begin{equation}
+    N(<r)=\int f(E)d^3\mathbf{v}\sim |E|^{p-3/2}
+\end{equation}
+and $t_{2b}\sim v^3/n\sim |E|^{-p}$; they combine into
+\begin{equation}
+    F_{max}(E)\sim |E|^{2p-3/2}.
+\end{equation}
+A more accurate analysis yields
+\begin{equation}
+    F(E)=-F_{max}(E)\beta(p),
+\end{equation}
+where the the exact solution, that is the value of $p$, can be derived by imposing $F(E)=const$ from the stationarity condition.\\Bahcall and Wolf (1976) found the solution $p=1/4$.
+\subsubsection{Two-dimensional Analysis: Loss Cone effects}
+
+Let us focus on loss cone effects; the DF is now in general a function of both $E$ and $J$.\\By assuming stellar encounters to be dominated by distant and weak gravitational interactions, $J$ diffusion problem can be treated with RW theory and it can be defined the angular momentum step size
+\begin{equation}\label{j_2 definition}
+    j_2\sim J_{max}(t_d/t_r)^{1/2},
+\end{equation}
+
+it represents the dispersion in $J$ suffered over $t_d$.\\The dimensionless quantity
+\begin{equation}
+    q(E)\equiv\frac{j_2^2}{J_{min}^2}
+\end{equation}
+enables us to distinguish two extreme scenarios in terms of stellar consumption rate:
+\begin{itemize}
+  \item  \(q \ll 1\) (Empty Loss Cone): $j_2\ll J_{min}$ implies a too small RW step size for diffusion to be effective and only stars with $J$ close to $J_{min}$ can enter the loss cone.\\Since $t_{2b}\gg t_d$ the loss cone remeins nearly empty and the capture rate is limited by diffusion.
+  \item  \(q \gg 1\) (Full Loss Cone): $j_2\gg J_{min}$ implies a large RW step size compared to loss cone size and many stars in the range $J_{min}<J<J_{min}+j_2$ can be captured.\\In this regime equation (\ref{j_2 definition}) predicts many weak stellar encounters per orbital period and thus an almost full loss cone as the star consumption, takes place over $t_d$,is slower than stellar capture rate; stellar consumption rate is limited by orbital period.
+\end{itemize}
+
+The stellar consumption rate per unit energy is
+\begin{equation}  
+-F_E(E) \sim
+\begin{cases}
+\frac{F_{max}(E)|E|^{-1}}{ln\left(\frac{GM}{|E|r_t}\right)}, & q \ll 1 \\
+q^{-1}F_{max}(E)|E|^{-1},   & q \gg 1
+\end{cases}
+\end{equation}
+and is strongly peaked at $E_{crit}$- or equivalently at $r_t$- at which $q(E_{crit})\approx1$.
+
+\subsection{Unbound stars consumption}
+Previously it has been pointed out that the majority of the stellar capture involves stars at $E_{cri}$ (or $r_{crit}$), this indicates that if the critical radius exceeds the influence radius, within which stars are mainly bound, this process affects primarly Unbound stars.\\In this region the stellar flux becomes
+\begin{equation}
+    F_{max}\sim \frac{N(<r)}{t_{2b}(r)}\sim \left(\frac{r}{r_a}\right)^3 F_{max}(E_a)
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+\subsection{Loss cone theory role in Hybrid Model}
+Devoted to determine evolutionary tracks for BH binaries evolving via three-body scattering with background stars and GWs emission \cite{Quinlan_1996} \cite{Sesana_2010}, one of the key points of the adopted model turns out to be the nature of stars involved in close encounters with the binary. At beginning, when the pair forms, all stars intersecting its orbit, i.e. populating the "Loss cone" are expelled via gravitational slingshot effect mainly; this mechanism results in the erosion of the stellar core and drives efficiently the binary down to a separation of the order of the hardening radius. Thereafter, for the shrinking to proceed, loss cone orbits must be refilled. Without addressing the problem concerning how this process takes place, it is relevant to point out that, once depleted all the stars inside $a_h$, stars candidate to replenish the loss cone come from outside this region.\\Therefore, for nearly equal mass BHs, having $a_h\sim r_{inf}$, or shallow stellar cores from the transistion soft/hard on, the scattering with unbound stars becomes dominant until the binary develops efficient GWs emission phase.\\Once established whether the vast majority of stars exchanging energy and angular momentum with the binary are bound or unbound to such a pair, the Hybrid model should take into account loss cone status through some parameters. This information enters the model by means of the normalizing density and velocity dispersion of $H_u$ and $K_u$; when they are set equal to their value at $r_{inf}$, the model is assuming that the loss cone is always full at $r>r_{inf}$ (pinhole regime) and empty at $r<r_{inf}$ (diffusive regime).\\Testing the model by changing the normalizing quantities  serves to investigate how the loss cone refilling affects the binary evolution.
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{Loss_cone.png}
+    \caption{Fig. 1(a).—Velocity distribution of stars with fixed energy $E$;$J$ varies accordingly to the direction of $\mathbf{v}$ emphasising the two-dimensional nature of the problem. The vertical axis points towards the compact object of mass $M$.
+Fig. 1(6).—The velocity sphere viewed from below. On the left the empty loss cone scenario; stellar density is nearly indipendent of $J$ everywhere but $J\gtrsim J_{min}$ where is quickly declines. On the right the full loss cone regime; consumed stars are immediately replenished by stars from a region much more extended- and uniform density- than the loss cone itself (the “pinhole” limit).}
+    \label{loss cone image}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\section{Gravitational Radiation from Black Hole Binaries}
+
+
+
+
+
+\subsection{Linearized Gravitational Field Equation}
+
+The starting point of the theoretical derivation of GWs properties, such as the energy and angular momentum they transport, from BH binary and the associated back-reaction on the astrophysical source, is the linearization of  field equations of Generl Relativity (GR)
+\begin{equation}\label{Einstein field eq.}
+    R_{\mu \nu}-\frac{1}{2}g_{\mu \nu} R=\frac{8\pi G}{c^4}T_{\mu \nu}.
+\end{equation}
+These constitute ten coupled, non-linear, second-order partial differential equations for the metric tensor; neverthless, they are not sufficient to uniquely set the ten indipendent components of $g_{\mu\nu}$ due to the four  Bianchi identities, equivalent to the same number of differential constraints, resulting in six  independent equations only. These four degrees of freedom are intimately connected to gauge symmetries, reflecting the arbitrariness of the four coordinates $x^\mu$ used to represent and solve Equation (\ref{Einstein field eq.}).\\To show how gravitational radiation emerges from Equation (\ref{Einstein field eq.}), we need to expand it around the Minkowski metric $\eta_{\mu \nu}=diag(-1,+1,+1,+1)$; therefore we assume
+\begin{equation}
+    g_{\mu \nu}(x)=\eta_{\mu \nu}+h_{\mu \nu}(x),
+\end{equation}
+with $|h_{\mu \nu}|\ll1$ being a symmetric tensor representing a small perturbation of the flat spacetime.\\The left-hand side of Equation (\ref{Einstein field eq.}) encodes the geometry and curvature of spacetime and contains all terms that are functions of the metric; in terms of the affine connection
+\begin{equation}\label{affine connection def}
+    \Gamma^\lambda _{\mu\nu}=\frac{1}{2}g^{\lambda \rho}(\partial_\mu g_{\nu\rho}+\partial_\nu g_{\rho\mu}-\partial_\rho g_{\mu\nu})
+\end{equation}
+and the Riemann tensor
+\begin{equation}\label{Riemmann tensor def}
+    R_{\lambda\mu}{}^{\rho}{}_{\nu}=\partial_\lambda \Gamma_{\mu\nu}^\rho-\partial_\mu \Gamma_{\lambda\nu}^\rho+\Gamma_{\lambda\sigma}^\rho \Gamma_{\mu\nu}^\sigma-\Gamma_{\mu\sigma}^\rho \Gamma_{\lambda\nu}^\sigma,
+\end{equation}
+they can be expressed indeed as 
+\begin{equation}\label{Ricci tensor def}
+    R_{\mu\nu}=R_{\sigma\mu}{}^{\sigma}{}_{\nu}
+\end{equation}
+and 
+\begin{equation}\label{Ricci scalar def} R=g^{\alpha\beta}R_{\alpha\beta}=R_\sigma^\sigma.
+\end{equation}
+On the right-hand side, instead, appears the Energy-Momentum tensor; it can be read as the source term of the gravitational field equations and turns out to be
+\begin{equation}\label{Energy-Momentum tensor def}
+    T^{\mu\nu}=(\rho+p/c^2)u^\mu u^\nu+pg^{\mu\nu}
+\end{equation}
+for a perfect fluid of density $\rho$, pressure $p$ and four-velocity $v^\mu$.\\It straightforward to prove that, to the first order in the metric perturbation, they become:
+\begin{equation}\label{linearized Ricci tensor}
+    R_{\mu \nu}=-\frac{1}{2}(\Box h_{\mu \nu}+\partial_\mu \partial_\nu h-\partial_\lambda\partial_\mu h_\nu^\lambda-\partial_\nu\partial_\lambda h_\mu^\lambda)
+\end{equation}
+ and
+\begin{equation}\label{linearized ricci scalar}
+    R=\partial_\mu \partial_\nu h^{\mu\nu}-\Box h,
+\end{equation}
+where $h$ denotes $h_{\mu \nu}$ trace.\\Defining the so-called "trace reverse" of $h_{\mu\nu}$
+\begin{equation}\label{trace reverse definition}
+    \bar{h}_{\mu\nu}\equiv h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu} h
+\end{equation}
+and plugging the terms of Equations (\ref{linearized Ricci tensor}) and (\ref{linearized ricci scalar}) into Equation (\ref{Einstein field eq.}), the field equations take the form
+\begin{equation}\label{linearized Einstein Eq. LONG}
+    \Box \bar{h}_{\mu\nu} + \eta_{\mu\nu}\partial_\alpha\partial_\beta \bar{h}^{\alpha\beta}-\partial_\mu\partial_\lambda \bar{h}^\lambda_\nu-\partial_\nu\partial_\lambda \bar{h}^\lambda_\mu=-\frac{16\pi G}{c^4}T_{\mu\nu}.
+\end{equation}
+Taking advantage of the gauge freedom of Equation (\ref{Einstein field eq.}), it can be performed an infintesimal coordinate transformation of the kind
+\begin{equation}
+    x^\mu \rightarrow{}x'^\mu=x^\mu+\xi^\mu(x);
+\end{equation}
+as tensors obey to precise law of transformation, this yields
+\begin{equation}
+    \bar{h}'_{\mu\nu}=\frac{\partial x^\alpha}{\partial x'^\mu}\frac{\partial x^\beta}{\partial x'^\nu}\bar{h}_{\alpha\beta}\approx \bar{h}_{\mu\nu}-\partial _\mu \xi_\nu -\partial_\nu \xi_\mu+\eta_{\mu\nu}\partial_\sigma\xi^\sigma.
+\end{equation}
+Yet, if the four functions $\xi^\mu$ are chosen so as to satisfy the so-called De Donder gauge condition, i.e. $\Box\xi^\mu=\partial_\sigma\bar{h}^{\sigma\mu}$, then $\partial_\sigma\bar{h}'^{\sigma\mu}=0$ and, dropping the prime, Equation (\ref{linearized Einstein Eq. LONG}) semplifies to
+\begin{equation}\label{linearized Einstein eq + gauge condition}
+\begin{cases}
+\Box \bar{h}_{\mu\nu} = -\dfrac{16\pi G}{c^4} T_{\mu\nu} \\
+\partial_\mu\bar{h}^{\mu\nu}=0.
+\end{cases}
+\end{equation}
+We are now ready to address the problem of determining  the general solution of the linearized Einstein's equations coupled with the De Donder gauge condition. 
+
+
+\subsection{Generation and Propagation of Gravitational Waves}
+
+To study the formation of GWs we initially focus on the solution of the problem defined in Equation (\ref{linearized Einstein eq + gauge condition}) inside the source where $T_{\mu\nu}\ne 0$.\\Linear partial differential equations solution can be obtained by the method of Green's function; by definition, the Green's function $G$ is the solution of the associated equation in case of a pont-like source, i.e.
+\begin{equation}\label{Green equation}
+    \Box_x G(x-x') = \delta^{(4)}(x-x'),
+\end{equation}
+with $\delta^{(4)}(x-x')$ being the four-dimensional Dirac function.\\It is relevant to note that, apart from the B.C. of the problem, $G$ depends only on the linear operator; therefore, from the radiation problem in electromagnetism, we already know that the proper solution is the retarded Green's function 
+\begin{equation}\label{retarded Green function}
+    G(x-x')=-\frac{1}{4\pi |\mathbf{x}-\mathbf{x'}|}\delta^{(4)}(ct_{ret}-ct'),
+\end{equation}
+where 
+\begin{equation}\label{retarded time def}
+    t_{ret}=t-\frac{|\mathbf{x}-\mathbf{x'}|}{c}
+\end{equation}
+is the time in past at which the radiation was emitted at $\mathbf{x'}$ in order to be observed at $\mathbf{x}$ at time $t$. Once the Green's function is found, the general solution will be the convolution between it and source term:
+\begin{equation}\label{h_mn general solution}
+    \bar{h}_{\mu\nu}(t,\mathbf{x})=\frac{4G}{c^4}\int d^3x'\frac{T_{\mu\nu}(t_{ret},\mathbf{x'})}{|\mathbf{x}-\mathbf{x'}|}.
+\end{equation}
+Prior to examining the formula reported in Equation (\ref{h_mn general solution}) and assessing which additional simplifications can be implemented and when they apply, it is appropriate to analyze how GWs propagate in vacuo.\\Outside the GWs source, $T_{\mu\nu}$ vanishes and, owing to the linearity of the d’Alembert operator, the solution can be expressed as superposition of plane waves without loss of generality, that is
+\begin{equation}
+    \bar{h}_{\mu\nu}(x)=\int d^3k (A_{\mu\nu}(\mathbf{k})e^{ik_\rho x^\rho}+c.c.)
+\end{equation}
+However, not all plane waves satisfy the linearized field equation in vacuo along with the gauge condition but linearity enables us to study the properties of a single plane wave separately; consequently, inserting the Ansatz $\bar{h}_{\mu\nu}\sim A_{\mu\nu}e^{ik_\rho x^\rho}$ yields the following two constraints:
+\begin{enumerate}
+    \item $(k_\rho k^\rho=0)$: the four-vector $k^\mu=(\omega/c,\mathbf{k})$ is a light-like vector (GWs travel at light speed $c$ in vacuo).
+    \item $(k_\mu A^{\mu\nu}=0)$: it implies $A^{0\nu}=A^{3\nu}$ if we deal with GWs propagating along the $x^3$ direction, hence $k^\mu=(k,0,0,k)$.
+\end{enumerate}
+At this stage, the amplitude tensor $A^{\mu\nu}$ possesses six indipendet components --- ten, due to symmetry, reduced by the four constraints imposed by the gauge conditions --- and can be written as
+\begin{equation}\label{A^mn 6 dof}   
+A^{\mu\nu} =
+\begin{pmatrix}
+A^{00} & A^{10} & A^{20} & A^{00} \\
+A^{10} & A^{11} & A^{12} & A^{10} \\
+A^{20} & A^{12} & A^{22} & A^{20} \\
+A^{00} & A^{10} & A^{20} & A^{00}
+\end{pmatrix}.
+\end{equation}
+Out of the six polarizations shown in Equation (\ref{A^mn 6 dof}), four are unphysical because they vanish when the residual gauge freedom associated with four arbitrary harmonic functions $\xi^\mu$ is exploited. One is free to adopt functions proportional to the plane wave solutions of the vacuo problem, i.e. $\xi^\mu=\epsilon^\mu e^{ik_\rho x^\rho}$ are harmonic, and to set their amplitudes $\epsilon^\mu$ such that 
+\begin{equation}\label{A^mn TT gauge}   
+A^{\mu\nu}_{TT} =
+\begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & h_+ & h_x & 0 \\
+0 & h_x & -h_+ & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix}.
+\end{equation}
+The coordinate system where $A^{\mu\nu}$ is in the form of Equation (\ref{A^mn TT gauge}), with two indipendent polarizations only, and defined by 
+\begin{equation}
+    \partial_\mu h^{\mu\nu}=0, \quad h^{0\mu}=0, \quad h^i_i=0,
+\end{equation}
+is referred to as "TT gauge"\footnote{In the TT gauge, according to the definition provided, $\bar{h}_{ij}^{TT}=h_{ij}^{TT}$.}.\\Having analyzed the propagation of GWs in vacuo and the properties of the TT gauge, we are now in the position to focus again on the source solution reported in Equation (\ref{h_mn general solution}). One of the greatest simplifications to this integral consists of the so-called "Compact-source approximation"; it applies outside the source whenever its size is negligible with respect to the source-detector separation. In this regime, we can retain the leading term of the multipole expansion only, thus
+\begin{equation}\label{h_mn compact source solution}
+    h_{ij}^{TT}(t,\mathbf{x})=\frac{4G}{c^4r}\int d^3x'T_{ij}(t_{ret},\mathbf{x'}).
+\end{equation}
+Furthermore, far from the source, the conservation of the Energy-Momentum tensor, namely $\nabla_\mu T^{\mu\nu}\approx\partial_\mu T^{\mu\nu}=0$, yields
+\begin{equation}\label{h_mn final form}
+    h_{ij}^{TT}(t,\boldsymbol{x})=\frac{2G}{rc^4}\ddot{Q}^{TT}_{ij}(t-r/c)
+\end{equation}
+at lowest order in the low-velocity expansion.\\The term $Q^{TT}_{ij}$ introduced in Equation (\ref{h_mn final form})\footnote{The components with at least one time index are excluded from our analysis because they are constant and therefore do not contribute to GWs formation.} is the representation of the quadrupole moment in the class of coordinate systems satisfying the TT gauge conditions; defining the quadrupole moment of $T^{00}/c^2=\rho$ as
+\begin{equation}\label{M_ij definition}
+    M^{ij}\equiv \frac{1}{c^2}\int d^3x T^{00}(t,\boldsymbol{x})x^ix^j,
+\end{equation}
+it is thus possible to write
+\begin{equation}\label{Q_ij def}
+    Q^{ij}\equiv M^{ij}-\frac{1}{3}\delta^{ij}M_{kk}=\int d^3x\rho(t,\mathbf{x})\left(x^ix^j-\frac{1}{3}r^2\delta^{ij}\right).
+\end{equation}
+Equation (\ref{h_mn compact source solution}) shows that, unlike electromagnetic radiation, at lowest order the gravitational radiation arises from changes in the quadrupole moment; other important observables such as the energy and angular momentum carried by GWs, needed to estimate the back-reaction, will be derived from the quantities defined in Equation (\ref{Q_ij def}) indeed.\\The energy and angular momentum conservation laws impose that the rates a which these quantities are carried away by GWs at time $t$ and at large separation $r$ from the source coincide with the corresponding rates of orbital energy ---if the emitting system consists of a BH binary--- and angular momentum, negletting the spin contribute, loss evaluated at the appropriate retarded time; in formulae:
+\begin{equation}\label{energy loss rate by GWs}
+    P_{quad}=\frac{dE_{gw}}{dt}=\frac{G}{5c^5}\langle\dddot{Q}_{ij}\dddot{Q}_{ij}\rangle=-\frac{dE_{source}}{dt},
+\end{equation}
+or equivalently in terms of $M_{ij}$
+\begin{equation}\label{P_quad in terms of M_ij}
+     P_{quad}=\frac{G}{5c^5}\left\langle\dddot{M}_{ij}\dddot{M}_{ij}-\frac{1}{3}(\dddot{M}_{kk})^2\right\rangle,
+\end{equation}
+and 
+\begin{equation}\label{angular momentum loss rate by GWs}
+    \frac{dL^i_{gw}}{dt}=\frac{2G}{5c^5}\epsilon^{ijk}\langle\ddot{Q}_{jl}\dddot{Q}_{kl}\rangle=-\frac{dL^i_{source}}{dt}.
+\end{equation}
+Equations (\ref{energy loss rate by GWs}) and (\ref{angular momentum loss rate by GWs}) will be of fundamental importance for estimating the back-reaction induced by GWs emission on the black hole binary.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Gravitational Waves from Black Hole Binaries and Back-Reaction}
+We now focus on the gravitational radiation emitted by two masses $m_1$ and $m_2$ moving along elliptic Keplerian orbit. Let $m=m_1+m_2$ and $\mu=m_1\cdot m_2/{m}$ be the total mass and the reduced mass respectively.\\Regardless of whether the orbit is bound or unbound, the motion of the two bodies takes place in a plane due to the conservation of the angular momentum $\mathbf{L}$; therefore, in this plane, the x-y plane, perpendicular to $\mathbf{L}$, it is convenient to  
+introduce the polar coordinates $(r,\psi)$ with origin at center-of-mass.\\In this frame, as before denoted by $S_{CM}$, 
+\begin{equation}\label{L of two body problem}
+    L_z=\mu r^2\dot{\psi}
+\end{equation}
+coincides with the modulus $L$ of the costant vector while, as a consequence of the Köenig theorem,
+\begin{equation}\label{E of two body problem}
+    E=\frac{1}{2}\mu \dot{r}^2+\frac{L^2}{2\mu r^2}-\frac{Gm\mu}{r}
+\end{equation}
+exhibits only the term of kinetic energy corresponding to the relative motion of the system, as in $S_{CM}$ holds $K_{CM}=0$ by definition.\\The integration of Equation (\ref{E of two body problem}) requires, as in \parencite{Capozziello_2008}, the introduction of the auxiliary variable $w(\psi)=1/r(\psi)$; plugging it into the energy conservation identity, Equation (\ref{E of two body problem}) becomes 
+\begin{equation}
+    w'^2+w^2-\frac{2Gm_1m_2\mu}{L^2}w=\frac{2\mu E}{L^2}
+\end{equation}
+where $w'\equiv dw/d\psi$. Differentiating both sides of the last equation with respect to $\psi$ leads to
+\begin{equation}\label{u differential equation}
+    w'\left(w''+w-\frac{Gm_1m_2\mu}{L^2}\right)=0.
+\end{equation}
+Apart from the solution $w=const$, corresponding to a circular binary, the problem admits harmonic–oscillator–like and, upon solving for $r(\psi)$, it is found to be given by
+\begin{equation}\label{two-body solution}
+    r(\psi)=\frac{R}{1+e\cos{\psi}},
+\end{equation}
+with $R=L^2/(Gm\mu^2)$ being semi-latus rectum --- the polar axis is aligned to the major axis $2a$, so that 
+$R$ corresponds to the distance between the origin and the point of the conic at $\psi=\pi/2$--- and is related to the eccentricity $e$ by 
+\begin{equation}\label{eccentricity formula}
+    e^2=1-\frac{R}{a}=1+\frac{2EL^2}{G^2m^2\mu^3}.
+\end{equation}
+It is worth of noticing that we are interested in the GWs emission process by a BH binary, which is by definition a gravitationally bound system; therefore, from this point onward it will be assumed $E<0$ and thus, by virtue of Equation (\ref{eccentricity formula}), $0\le e<1$.
+Since the two semiaxes are given by
+\begin{equation}\label{a and b as a function of e}
+    a=\frac{R}{1-e^2} \qquad \qquad b=\frac{R}{\sqrt{1-e^2}},
+\end{equation}
+inserting Equation (\ref{eccentricity formula}) into the first identity of Equation (\ref{a and b as a function of e}) gives the semi-major axis in terms of $E$; explicitly:
+\begin{equation}\label{a as a function of E}
+    a=-\frac{Gm\mu}{2E}
+\end{equation}
+It follows that fixing the energy means setting the semi-major axis.\\The functions $r(t)$ and $\psi(t)$ can be obtained by direct integration of Equations (\ref{L of two body problem}) and (\ref{E of two body problem}); they are usually given in the parametric form
+\begin{equation}
+    r(t)=a[1-e\cos{u(t)}] \qquad \qquad\psi(t)=\frac{\cos{u(t)}-e}{1-e\cos{u(t)}}
+\end{equation}
+in terms of the "eccentric anomaly" $u$ defined in the famous Kepler equation
+\begin{equation}
+    u(t)-e\sin{u(t)}=\left(\frac{Gm}{a^3}\right)^{1/2}t\equiv \omega_0 t.
+\end{equation}
+The transformation from from polar cordinates $(r,\psi)$ to Cartesian ones $(x,y)$ is illistrated below
+\begin{equation}
+\begin{cases}
+x = r \cos\psi = a\left[\cos u(t) - e\right] \\
+y = r \sin\psi = b \sin u(t) .
+\end{cases}
+\end{equation}
+We now possess all the necessary ingredients to proceed with the computation of the rates of energy and angular momentum carried by GWs, which will play a fundamental role in assessing the back-reaction on the binary system.\\In the reference system $S_{CM}$ holds $\rho(t,\mathbf{x})=\mu\delta(x-r\cos{\psi})\delta(y-r\sin{\psi})\delta(z)$
+and, according to \\Equation (\ref{M_ij definition}), it is immediate to get
+\begin{equation}
+M_{ij} = \mu r^2(t)\begin{bmatrix}
+\cos^2(\psi) & \sin{(\psi)\cos(\psi)} \\
+\sin{(\psi)\cos(\psi)} & \sin^2(\psi)
+\end{bmatrix}.
+\end{equation}
+The time derivatives are easier computed when $r$, which is a function of time itself, is expressed as a function of $\psi$; this is accomplished by replacing this variable with the general solution of the two-body problem provided by Equation (\ref{two-body solution}). A simple computation returns the third time derivatives needed to derive the power radiated in the quadrupole approximation, i.e.
+\begin{equation}\label{d3M _11/dt3}  
+\dddot{M}_{11} = \beta (1 + e \cos \psi)^2 \left[ 2 \sin 2\psi + 3e \sin \psi \cos^2 \psi \right],
+\end{equation}
+
+\begin{equation}\label{d3M _22/dt3}  
+    \dddot{M}_{22} = \beta (1 + e \cos \psi)^2 \left[ -2 \sin 2\psi - e \sin \psi (1 + 3 \cos^2 \psi) \right],
+\end{equation}
+
+
+\begin{equation}
+    \dddot{M}_{12} = \beta (1 + e \cos \psi)^2 \left[ -2 \cos 2\psi + e \cos \psi (1 - 3 \cos^2 \psi) \right],
+\end{equation}
+where the factor $\beta$ is defined as
+\begin{equation}
+\beta^2 \equiv \frac{4 G^3 \mu^2 m^3}{a^5 (1 - e^2)^5}. 
+\end{equation}
+By means of Equation (\ref{energy loss rate by GWs}) we get in conclusion
+\begin{equation}
+    P(\psi)=\frac{8G^4}{15c^5}\frac{\mu^2m^3}{a^5(1-e^2)^5}(1+e\cos(\psi))^4[12(1+e\cos(\psi))^2+e^2\sin^2(\psi)].
+\end{equation}
+However, we recall that this istantaneous quantity is not constant over one orbital period for elliptic Keplerian orbits as in general $M_{ij}$ will suffer from different rate of variation from pericenter to apocenter; therefore, taking the temporal average over one orbital period, $T\equiv2\pi/\omega_0$ returns
+\begin{equation}\label{P of GWs binary}
+    P\equiv\frac{1}{T}\int_0^T dtP(\psi)=\frac{\omega_0}{2\pi}\int_0^{2\pi} d\psi \frac{P(\psi)}{\dot{\psi}}=\frac{32G^4\mu^2m^3}{5c^5a^5}F(e),
+\end{equation}
+with 
+\begin{equation}\label{F(e) definition}
+    F(e)=\frac{1}{(1-e^2)^{7/2}}\left(1+\frac{73}{24}e^2+\frac{37}{96}e^4\right)
+\end{equation}
+being a function strongly depending on the eccentricity, which reduces to unity in case of circular binary.\\Throughout the inspiral phase, the binary radiates not only energy but angular momentum as well, carried by GWS, and undergoes secular changes in both semimajor axis and ellipticity until coalescence eventually occurs. Therefore, another key ingredient in evaluating the back-reaction on the binary evolution is the determination of the angular momentum loss rate. It is quantified in Equation (\ref{angular momentum loss rate by GWs}) which becomes
+\begin{equation}\label{angular momentum loss rate in terms of M_ij}
+    \frac{dL^i_{source}}{dt}=-\frac{2G}{5c^5}\epsilon^{ikl}\left<\dddot{M}_{ka}\dddot{M}_{la}\right>
+\end{equation}
+as the the terms of the form $\epsilon^{ijk}\delta_{jl}\dddot{Q}_{kl}$ vanish, since they correspond to the contraction of an antisymmetric tensor with a symmetric one.\\Taking into account that, in $S_{CM}$, all components $M_{i3}$ are identically zero and that $L=L_z=L^3_{source}$, one can rewrite Equation (\ref{angular momentum loss rate in terms of M_ij}) in a more convenient form consistent with the previous arguments:
+\begin{equation}
+    \frac{dL}{dt}=\frac{4G}{5c^5}\langle \ddot{M}_{12}(\dddot{M}_{11}-\dddot{M}_{22})\rangle.
+\end{equation}
+The last identity provides $dL/dt$ in terms of the second and third derivatives of the quadrupole moment of $\rho$; although the second derivative $\ddot{M}_{12}$ has not been computed explicitly yet, it follows straightforwardly from the same procedure used to derive $\dddot{M}_{ij}$, hence
+\begin{equation}\label{d2 M_12/dt2}
+\ddot{M}_{12}
+=
+\frac{G \mu m}{a(1 - e^2)} \sin \psi
+\left[
+-4(1 + e \cos \psi)^2 \cos \psi
++ 2e \left( 3 \cos^2 \psi - 1 + 2e \cos^3 \psi \right)
+\right].
+\end{equation}
+Yet, adopting the expressions for reported in Equations (\ref{d3M _11/dt3}), (\ref{d3M _22/dt3}) and (\ref{d2 M_12/dt2}) respectively, we get the angular momentum loss, corresponding to minus the angular momentum carried by the gravitational radiation in the quadrupole approximation; then, the temporal average over a single orbital period $T$, transformed into an integral over the angular position $\psi$, returns
+\begin{equation}
+    \frac{dL}{dt}=-\frac{32}{5}\frac{G^{7/2}\mu^2m^{5/2}}{c^5a^{7/2}}\frac{1}{(1-e^2)^2}\left(1+\frac{7}{8}e^2\right)
+\end{equation}
+Lastly, the simi-major axis and eccentricity evolution of the BH binary results by imposing the conservation of the energy and angular momentum of the system composed of the binary and GWs; differentiating Equations (\ref{eccentricity formula}) and (\ref{a as a function of E}) with respect to the time yields
+\begin{equation}
+    \frac{da}{dt}=\frac{Gm\mu}{2E^2(a)}(-P)
+\end{equation}
+and
+\begin{equation}
+    2e\frac{de}{dt}=\frac{2}{G^2m^2\mu^3}\left[-PL^2(a,e)+2E(a)L(a,e)\frac{dL}{dt}\right].
+\end{equation}
+By rearranging all the terms and performing the appropriate substitutions, \textcite{Peters_1963} gave 
+\begin{equation}\label{da/dt Peterson}
+    \frac{da}{dt} = -\frac{64}{5} \frac{G^3 \mu m^2}{c^5 a^3} \frac{1}{(1 - e^2)^{7/2}} \left( 1 + \frac{73}{24}e^2 + \frac{37}{96}e^4 \right)
+\end{equation}
+along with
+\begin{equation}\label{de/dt Peterson}
+    \frac{de}{dt} = -\frac{304}{15} \frac{G^3 \mu m^2}{c^5 a^4}  \frac{e}{(1 - e^2)^{5/2}} \left( 1 + \frac{121}{304}e^2 \right)
+\end{equation}
+that has been employed by \textcite{Quinlan_1996} and \textcite{Sesana_2010} in order to reconstruct evolutionary tracks of BH binaries through a "Hybrid model", which will be described later.\\Equations (\ref{da/dt Peterson}) and (\ref{de/dt Peterson}) prove that GWs emission  is efficient, more precisely at little binary separation due to $a^{-3}$ and $a^{-4}$ dependence respectively, not only in shrinking the BHs pair, by extracting orbital energy, but in promoting the orbit circularization as well, thus making this mechanism dominant over stellar scattering at late stage of binary inspiral.\\Furthermore, another key piece of information that can be derived from the theory is the expected coalescence time $\tau$ of the binary in the case of gravitational-wave emission alone. This should reproduce the characteristic hardening timescale of the final stage, when orbital shrinking driven by gravitational radiation takes over stellar scattering. This is obtained by combining Equations (\ref{da/dt Peterson}) and (\ref{de/dt Peterson}); this mathematical operation leads to a differential equation for $a=a(e)$, which reads
+\begin{equation}\label{da/de Maggiore}
+    \frac{da}{de}=\frac{12}{19}\frac{1+\frac{73}{24}e^2+\frac{37}{96}e^4}{e(1-e^2)\left(1+\frac{121}{304}e^2\right)}.
+\end{equation}
+The last equation admits analytic solution of the kind
+\begin{equation}\label{a=a(e) Maggiore}
+    a(e)=a_0\frac{g(e)}{g(e_0)}
+\end{equation}
+where 
+\begin{equation}\label{g(e) Maggiore}
+    g(e)=\frac{e^{12/19}}{1-e^2}\left(1+\frac{121}{304}e^2\right)^{870/2299}
+\end{equation}
+and $(a_0,e_0)$ denotes the initial point of the of binary evolutionary track.\\Last but not least, given the BH binary initial condition $(a_0,e_0)$, the coalescence time is found by integration over the eccentricity and by noticing that, if we set $(a(0),e(0))=(a_0,e_0)$, $e(\tau)=0$ due to orbit circularization:
+\begin{equation}\label{tau coal. analytical}
+\tau(a_0,e_0)=\int_0^{\tau(a_0,e_0)}dt=\int_{e_0}^{0}de \frac{dt}{de}=\int_{e_0}^{0}de \frac{a^4(e)(1-e^2)^{5/2}}{e\left(1+\frac{121}{304}e^2\right)}.
+\end{equation}
+By substituting Equation (\ref{a=a(e) Maggiore}) into Equation (\ref{tau coal. analytical}) one gets the final expression
+\begin{equation}\label{t_coal Maggiore} 
+\tau_{\mathrm{coal}}(a_0,e_0)
+=
+\frac{12}{19}
+\frac{c^5}{G^3}
+\frac{a_0^4}{\mu m^2}
+\int_{0}^{e_0}
+\frac{e^{29/19}
+\left(1+\frac{121}{304}e^2\right)^{1181/2299}}
+{(1-e^2)^{3/2}}
+\,\mathrm{d}e.
+\end{equation}
+
+
+
+
+
