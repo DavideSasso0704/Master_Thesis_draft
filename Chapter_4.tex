@@ -133,6 +133,178 @@ or equivalently
     \Phi(r)=-\frac{GM_*}{r}\left\{\frac{\gamma\!\left[n(3-p),Z\right]}{\Gamma[n(3-p)]
     }+Z^n\frac{\Gamma[n(2-p),Z]}{\Gamma[n(3-p)]}\right\}
 \end{equation}
+The generation of IC for the dwarf galaxy NGC 2O5, hereafter taken as a $z=0$ nucleated dwarf
+galaxy, is carried by OpOpgadget; the Sersic profile defined in this software is based on the 
+one analyzed by \textcite{Neto_1999}, i.e.
+\begin{equation}\label{Sersic profile Neto}
+    \rho(r)=\rho_0\left(\frac{r}{a}\right)^{-p}e^{-(r/a)^\nu},
+\end{equation}
+where $n=\nu^{-1}$, $a$ is the Sersic profile scalelength and no $b(n)$ is present. The same
+model can be described through several combinations of indipendent parameters; here, in order 
+to use the effective radii values obtained from sky survy, we need to use the analytical
+approximation 
+\begin{equation}
+    \ln{R_{eff}/a}=\frac{0.6950-\ln{\nu}}{\nu}-0.1789
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_bulge_scatter.png}
+    \caption{aaa}
+    \label{NGC205_bulge_scatter}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_NSC_scatter.png}
+    \caption{aaa}
+    \label{NGC205_NSC_scatter}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_scatter.png}
+    \caption{aaa}
+    \label{NGC205_scatter}
+\end{figure}
 
 
+\begin{figure}[h]
+\centering
+ \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_bulge_space_hist.png}
+        \caption{A}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_NSC_space_hist.png}
+        \caption{B}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_space_hist.png}
+        \caption{C}
+    \end{subfigure}
+    
+    \caption{aaa}
+    \label{3 NGC205_space_hist}
+\end{figure}
 
+\begin{figure}[h]
+\centering
+ \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_bulge_velocity_hist.png}
+        \caption{A}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_NSC_velocity_hist.png}
+        \caption{B}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_velocity_hist.png}
+        \caption{C}
+    \end{subfigure}
+    
+    \caption{aaa}
+    \label{3 NGC205_velocity_hist}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+ \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_bulge_density_Nbody.png}
+        \caption{A}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_NSC_density_Nbody.png}
+        \caption{B}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{NGC205_NSC_density_Nbody.png}
+        \caption{C}
+    \end{subfigure}
+    
+    \caption{aaa}
+    \label{3 NGC205_density_Nbody}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{NGC205_density_Nbody_vs_analytic.png}
+\caption{A}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[width=\linewidth]{NGC205_mass_Nbody_vs_analytic.png}
+\caption{B}
+\end{subfigure}
+
+\caption{aaa}
+\label{NGC205 density and mass plot Nbody vs analytical}
+\end{figure}
+
+COM data:
+\begin{itemize}
+    \item position:
+    \item velocity:
+\end{itemize}
+
+To test the stability of the Nbody generated IC, we let the system free to evolve over several
+tens of the dynamical time $t_{dyn}$ at half-mass radius $r_{half}$; by definition, the former
+is
+\begin{equation}\label{dynamical time def}
+    t_{dyn}=\frac{1}{\sqrt{G\bar{\rho}}}
+\end{equation}
+
+and the latter reads, for a spherical system,
+\begin{equation}
+    \bar{\rho}=\frac{M/2}{\frac{4}{3}\pi r_{half}^3}
+\end{equation}
+
+Numerically is found $r_{half}=...=... R_{eff}$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{NGC205_halfmass.png}
+    \caption{aaa}
+    \label{NGC205_halfmass}
+\end{figure}
+Yet, we get $t_{dyn}=...$, which agrees within $x\%$ the estimate obtained from the Analysis
+tool provided by OpOpgadget, which measures this quantity directely from the generated model.
+\\Waiting for evolution with Ketju.\\Additionaly, the virial ratio $Q$ has been computed as well as it gives a first indication
+of whether the model is virialized, i.e. at equilibrium, or expansion/contraction operate 
+within several dynamical times. In $S_{CM}$, it is defined as
+\begin{equation}\label{virial ratio}
+    Q=\frac{2K}{|U|}
+\end{equation}
+where
+\begin{equation}
+K = \sum_{i=1}^{N} \frac{1}{2} m_i v_i^2
+\end{equation}
+and
+\begin{equation}
+U = -\frac{1}{2} \sum_{i=1}^{N} \sum_{j \ne i} \frac{Gm_i m_j}{|\mathbf{x_i}-\mathbf{x_j}|}
+\end{equation}
+stand for the total kinetic and gravitational potential energies respsectively.
+\\By erasing the offset due the COM kinetic energy contribute, i.e.
+\begin{equation}\label{virial ratio without offset}
+    Q=\frac{2(K-K_{CM})}{|U|}
+\end{equation}
+it is found $Q=x$.

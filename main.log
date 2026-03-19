@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.1)  14 MAR 2026 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.1)  19 MAR 2026 01:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1294,19 +1294,108 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-]) [43]
+] [43]
+<Thesis_images/NGC205_bulge_scatter.png, id=811, 361.5909pt x 326.9013pt>
+File: Thesis_images/NGC205_bulge_scatter.png Graphic file (type png)
+<use Thesis_images/NGC205_bulge_scatter.png>
+Package pdftex.def Info: Thesis_images/NGC205_bulge_scatter.png  used on input line 152.
+(pdftex.def)             Requested size: 241.84843pt x 218.65361pt.
+<Thesis_images/NGC205_NSC_scatter.png, id=812, 399.894pt x 326.9013pt>
+File: Thesis_images/NGC205_NSC_scatter.png Graphic file (type png)
+<use Thesis_images/NGC205_NSC_scatter.png>
+Package pdftex.def Info: Thesis_images/NGC205_NSC_scatter.png  used on input line 159.
+(pdftex.def)             Requested size: 241.84843pt x 197.70357pt.
+<Thesis_images/NGC205_scatter.png, id=813, 636.6987pt x 281.3712pt>
+File: Thesis_images/NGC205_scatter.png Graphic file (type png)
+<use Thesis_images/NGC205_scatter.png>
+Package pdftex.def Info: Thesis_images/NGC205_scatter.png  used on input line 166.
+(pdftex.def)             Requested size: 241.84843pt x 106.87923pt.
+<Thesis_images/NGC205_bulge_space_hist.png, id=814, 431.6928pt x 327.8649pt>
+File: Thesis_images/NGC205_bulge_space_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_bulge_space_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_bulge_space_hist.png  used on input line 176.
+(pdftex.def)             Requested size: 145.11053pt x 110.20688pt.
+<Thesis_images/NGC205_NSC_space_hist.png, id=815, 431.6928pt x 327.8649pt>
+File: Thesis_images/NGC205_NSC_space_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_NSC_space_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_NSC_space_hist.png  used on input line 182.
+(pdftex.def)             Requested size: 145.11053pt x 110.20688pt.
+<Thesis_images/NGC205_space_hist.png, id=816, 431.6928pt x 327.8649pt>
+File: Thesis_images/NGC205_space_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_space_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_space_hist.png  used on input line 188.
+(pdftex.def)             Requested size: 145.11053pt x 110.20688pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Thesis_images/NGC205_bulge_velocity_hist.png, id=817, 425.4294pt x 327.1422pt>
+File: Thesis_images/NGC205_bulge_velocity_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_bulge_velocity_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_bulge_velocity_hist.png  used on input line 200.
+(pdftex.def)             Requested size: 145.11053pt x 111.58627pt.
+<Thesis_images/NGC205_NSC_velocity_hist.png, id=818, 425.4294pt x 327.1422pt>
+File: Thesis_images/NGC205_NSC_velocity_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_NSC_velocity_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_NSC_velocity_hist.png  used on input line 206.
+(pdftex.def)             Requested size: 145.11053pt x 111.58627pt.
+<Thesis_images/NGC205_velocity_hist.png, id=819, 425.4294pt x 327.1422pt>
+File: Thesis_images/NGC205_velocity_hist.png Graphic file (type png)
+<use Thesis_images/NGC205_velocity_hist.png>
+Package pdftex.def Info: Thesis_images/NGC205_velocity_hist.png  used on input line 212.
+(pdftex.def)             Requested size: 145.11053pt x 111.58627pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Thesis_images/NGC205_bulge_density_Nbody.png, id=820, 413.3844pt x 327.1422pt>
+File: Thesis_images/NGC205_bulge_density_Nbody.png Graphic file (type png)
+<use Thesis_images/NGC205_bulge_density_Nbody.png>
+Package pdftex.def Info: Thesis_images/NGC205_bulge_density_Nbody.png  used on input line 224.
+(pdftex.def)             Requested size: 145.11053pt x 114.83592pt.
+<Thesis_images/NGC205_NSC_density_Nbody.png, id=821, 417.7206pt x 327.1422pt>
+File: Thesis_images/NGC205_NSC_density_Nbody.png Graphic file (type png)
+<use Thesis_images/NGC205_NSC_density_Nbody.png>
+Package pdftex.def Info: Thesis_images/NGC205_NSC_density_Nbody.png  used on input line 230.
+(pdftex.def)             Requested size: 145.11053pt x 113.64288pt.
+File: Thesis_images/NGC205_NSC_density_Nbody.png Graphic file (type png)
+<use Thesis_images/NGC205_NSC_density_Nbody.png>
+Package pdftex.def Info: Thesis_images/NGC205_NSC_density_Nbody.png  used on input line 236.
+(pdftex.def)             Requested size: 145.11053pt x 113.64288pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Thesis_images/NGC205_density_Nbody_vs_analytic.png, id=822, 426.393pt x 327.8649pt>
+File: Thesis_images/NGC205_density_Nbody_vs_analytic.png Graphic file (type png)
+<use Thesis_images/NGC205_density_Nbody_vs_analytic.png>
+Package pdftex.def Info: Thesis_images/NGC205_density_Nbody_vs_analytic.png  used on input line 249.
+(pdftex.def)             Requested size: 217.66211pt x 167.36397pt.
+<Thesis_images/NGC205_mass_Nbody_vs_analytic.png, id=823, 411.2163pt x 327.1422pt>
+File: Thesis_images/NGC205_mass_Nbody_vs_analytic.png Graphic file (type png)
+<use Thesis_images/NGC205_mass_Nbody_vs_analytic.png>
+Package pdftex.def Info: Thesis_images/NGC205_mass_Nbody_vs_analytic.png  used on input line 255.
+(pdftex.def)             Requested size: 217.66211pt x 173.16489pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44 <./Thesis_images/NGC205_bulge_scatter.png> <./Thesis_images/NGC205_NSC_scatter.png>]
+<Thesis_images/NGC205_halfmass.png, id=836, 409.53pt x 327.8649pt>
+File: Thesis_images/NGC205_halfmass.png Graphic file (type png)
+<use Thesis_images/NGC205_halfmass.png>
+Package pdftex.def Info: Thesis_images/NGC205_halfmass.png  used on input line 285.
+(pdftex.def)             Requested size: 241.84843pt x 193.6237pt.
+ [45 <./Thesis_images/NGC205_scatter.png> <./Thesis_images/NGC205_bulge_space_hist.png> <./Thesis_images/NGC205_NSC_space_hist.png> <./Thesis_images/NGC205_space_hist.png>]) [46 <./Thesis_images/NGC205_bulge_velocity_hist.png> <./Thesis_images/NGC205_NSC_velocity_hist.png> <./Thesis_images/NGC205_velocity_hist.png> <./Thesis_images/NGC205_bulge_density_Nbody.png> <./Thesis_images/NGC205_NSC_density_Nbody.png>] [47 <./Thesis_images/NGC205_density_Nbody_vs_analytic.png> <./Thesis_images/NGC205_mass_Nbody_vs_analytic.png> <./Thesis_images/NGC205_halfmass.png>]
 Appendix A.
-[44
+[48
 
 
 
 ]
 Appendix B.
-[45
+[49
 
-] [46
+] [50
 
-] [47] (main.aux (Chapter_1.aux) (Chapter_2.aux) (Chapter_3.aux) (Chapter_4.aux))
+] [51] (main.aux (Chapter_1.aux) (Chapter_2.aux) (Chapter_3.aux) (Chapter_4.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1318,17 +1407,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36602 strings out of 467871
- 711809 string characters out of 5418377
- 1540376 words of memory out of 5000000
- 64626 multiletter control sequences out of 15000+600000
- 648913 words of font info for 94 fonts, out of 8000000 for 9000
+ 36777 strings out of 467871
+ 718250 string characters out of 5418377
+ 1540891 words of memory out of 5000000
+ 64779 multiletter control sequences out of 15000+600000
+ 649682 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,118p,1942b,1918s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (47 pages, 3347541 bytes).
+ <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\pochi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pochi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on main.pdf (51 pages, 5188477 bytes).
 PDF statistics:
- 1460 PDF objects out of 1728 (max. 8388607)
- 318 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1544 PDF objects out of 1728 (max. 8388607)
+ 339 named destinations out of 1000 (max. 500000)
+ 500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

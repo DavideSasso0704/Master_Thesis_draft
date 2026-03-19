@@ -27,6 +27,6 @@
 \contentsline {subsection}{\numberline {2.3.1}NGC 205 Hybrid Model Evolution}{34}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Cosmic Size Evolution Down to NGC 205}{37}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}N-body}{42}{section.2.4}%
-\contentsline {chapter}{\numberline {A}Physics Equation}{44}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Numerical Methods}{45}{appendix.B}%
-\contentsline {section}{\numberline {2.1}Runge-Kutta (4)}{45}{section.B.1}%
+\contentsline {chapter}{\numberline {A}Physics Equation}{48}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Numerical Methods}{49}{appendix.B}%
+\contentsline {section}{\numberline {2.1}Runge-Kutta (4)}{49}{section.B.1}%

@@ -310,6 +310,63 @@
       \field{pages}{244\bibrangedash 262}
       \range{pages}{19}
     \endentry
+    \entry{Neto_1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d32f32919b631fc13850ac39bc39dcc}{%
+           family={Lima\bibnamedelima Neto},
+           familyi={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={G.\bibnamedelimi B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13796620c014d6a5b0329828910a8ed7}{%
+           family={Gerbal},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=328ab9c53ceadcb8583d75bb17641dc2}{%
+           family={Marquez},
+           familyi={M\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press (OUP)}%
+      }
+      \strng{namehash}{7259cb58c75b67d16b5850dfea816ab6}
+      \strng{fullhash}{4c317d860b0c91d7580de5f61aa837c1}
+      \strng{fullhashraw}{4c317d860b0c91d7580de5f61aa837c1}
+      \strng{bibnamehash}{4c317d860b0c91d7580de5f61aa837c1}
+      \strng{authorbibnamehash}{4c317d860b0c91d7580de5f61aa837c1}
+      \strng{authornamehash}{7259cb58c75b67d16b5850dfea816ab6}
+      \strng{authorfullhash}{4c317d860b0c91d7580de5f61aa837c1}
+      \strng{authorfullhashraw}{4c317d860b0c91d7580de5f61aa837c1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1365-2966}
+      \field{journaltitle}{MNRAS}
+      \field{month}{10}
+      \field{number}{2}
+      \field{title}{The specific entropy of elliptical galaxies: an explanation for profile-shape distance indicators?}
+      \field{volume}{309}
+      \field{year}{1999}
+      \field{pages}{481\bibrangedash 495}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1046/j.1365-8711.1999.02849.x
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1046/j.1365-8711.1999.02849.x
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1046/j.1365-8711.1999.02849.x
+      \endverb
+    \endentry
     \entry{Magorrian_1998}{article}{}{}
       \name{author}{12}{}{%
         {{un=0,uniquepart=base,hash=60e5e988c1868cf4888d6048abca733e}{%
