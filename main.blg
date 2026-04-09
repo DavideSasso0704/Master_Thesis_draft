@@ -1,0 +1,18 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[1] Config.pm:331> INFO - Logfile is 'main.blg'
+[288] biber-MSWIN64:342> INFO - === 
+[374] Biber.pm:421> INFO - Reading 'main.bcf'
+[645] Biber.pm:1002> INFO - Found 35 citekeys in bib section 0
+[683] Biber.pm:4487> INFO - Processing section 0
+[712] Biber.pm:4678> INFO - Looking for bibtex file 'bibliografia.bib' for section 0
+[831] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1342] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliografia.bib'
+[6199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[6200] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[6200] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[6200] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[6555] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[17047] bbl.pm:779> INFO - Output to main.bbl
+[17048] Biber.pm:132> WARN - legacy month field 'Feb' in entry 'Abbott_2016' is not an integer - this will probably not sort properly.
+[17049] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\pochi\AppData\Local\Temp\biber_tmp_V2Dl\499af1e6906591d6961f19d66c065a09_12784.utf8, line 570, warning: 1 characters of junk seen at toplevel
+[17049] Biber.pm:134> INFO - WARNINGS: 2
